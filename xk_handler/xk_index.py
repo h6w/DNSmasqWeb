@@ -130,7 +130,7 @@ class IndexHandler(BaseHandler):
         '''
         cpu_infos = {} #collect here the information
         with open('/proc/stat','r') as f_stat:
-            lines = [line.split(self.sep) for content in f_stat.readlines() for line in content.split('\n') if line.startswith('cpu')]
+            lines = [line.split(' ') for content in f_stat.readlines() for line in content.split('\n') if line.startswith('cpu')]
 
         #compute for every cpu
         
