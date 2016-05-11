@@ -117,32 +117,10 @@ class IndexHandler(BaseHandler):
             4idle: twiddling thumbs
             5iowait: waiting for I/O to complete
             6irq: servicing inte   def getcpuload(self):
-        '''
-        CPU_Percentage=((Total-PrevTotal)-(Idle-PrevIdle))/(Total-PrevTotal)
-
-        '''
-        start = self.getcputime()
-        #wait a second
-        sleep(self.sleeptime)
-        stop = self.getcputime()
-
-        cpu_load = {}
-
-        for cpu in start:
-            Total = stop[cpu]['total']
-            PrevTotal = start[cpu]['total']
-
-            Idle = stop[cpu]['idle']
-            PrevIdle = start[cpu]['idle']
-            CPU_Percentage=((Total-PrevTotal)-(Idle-PrevIdle))/(Total-PrevTotal)*100
-            cpu_load.update({cpu: CPU_Percentage})
-        return cpu_loadrrupts
-            7softirq: servicing softirqs
 
         #the formulas from htop 
              user    nice   system  idle      iowait irq   softirq  steal  guest  guest_nice
         cpu  74608   2520   24433   1117073   6176   4054  0        0      0      0
-
 
         Idle=idle+iowait
         NonIdle=user+nice+system+irq+softirq+steal
