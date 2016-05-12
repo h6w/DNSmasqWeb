@@ -153,7 +153,7 @@ class IndexHandler(BaseHandler):
         Idle = 0
         for cpu in cpu_infos:
             Total += cpu_infos[cpu]['total']
-            Idle += stop[cpu]['idle']
+            Idle += cpu_infos[cpu]['idle']
         return ((Total-Idle)/Total)*100
 
     @Auth
