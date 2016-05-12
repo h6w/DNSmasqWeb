@@ -2,7 +2,7 @@
 #-*- coding:utf8 -*-
 # Desgin By Xiaok
 from xk_application.xk_main import *
-import platform,os,sys
+import platform,os,sys,math
 
 class IndexHandler(BaseHandler):
     def get_hostname(self):
