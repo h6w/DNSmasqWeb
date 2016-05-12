@@ -149,10 +149,12 @@ class IndexHandler(BaseHandler):
 
     def get_cpu(self):
         cpu_infos = self.get_cpuinfo()
+        Total = 0
+        Idle = 0
         for cpu in cpu_infos:
             Total += cpu_infos[cpu]['total']
             Idle += stop[cpu]['idle']
-        return ((Total-Idle)/Total)
+        return ((Total-Idle)/Total)*100
 
     @Auth
     def get(self):
