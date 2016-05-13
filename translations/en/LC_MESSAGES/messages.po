@@ -1,0 +1,363 @@
+# English translations for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the DNSmasqWeb project.
+# Tudor Holton <tudor@tudorholton.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: tudor@tudorholton.com\n"
+"POT-Creation-Date: 2016-05-13 15:41+1000\n"
+"PO-Revision-Date: 2016-05-13 13:34+1000\n"
+"Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: xk_html/xk_dhcp_host.html:8 xk_html/xk_dhcp_pool.html:8
+#: xk_html/xk_nav.html:17 xk_html/xk_top_nav.html:22
+msgid "DHCP Management"
+msgstr "DHCP Management"
+
+#: xk_html/xk_dhcp_host.html:20 xk_html/xk_dhcp_pool.html:21
+#: xk_html/xk_top_nav.html:25
+msgid "Binding Rules"
+msgstr "Binding Rules"
+
+#: xk_html/xk_dhcp_host.html:20 xk_html/xk_dhcp_pool.html:21
+msgid "Address Pool Management"
+msgstr "Address Pool Management"
+
+#: xk_html/xk_dhcp_host.html:29 xk_html/xk_dhcp_host.html:71
+#: xk_html/xk_index.html:46
+msgid "CPU Name"
+msgstr "CPU Name"
+
+#: xk_html/xk_dhcp_host.html:35 xk_html/xk_dhcp_host.html:72
+#: xk_html/xk_dhcp_host.html:147 xk_html/xk_dhcp_host.html:166
+#: xk_html/xk_dhcp_host.html:222
+msgid "MAC Address"
+msgstr "MAC Address"
+
+#: xk_html/xk_dhcp_host.html:41 xk_html/xk_dhcp_host.html:73
+#: xk_html/xk_dhcp_host.html:152 xk_html/xk_dhcp_host.html:170
+#: xk_html/xk_dhcp_host.html:226 xk_html/xk_index.html:53
+msgid "IP Address"
+msgstr "IP Address"
+
+#: xk_html/xk_dhcp_host.html:47 xk_html/xk_dhcp_host.html:74
+msgid "Action"
+msgstr "Action"
+
+#: xk_html/xk_dhcp_host.html:56 xk_html/xk_dhcp_host.html:75
+#: xk_html/xk_dhcp_pool.html:114 xk_html/xk_domain.html:35
+#: xk_html/xk_record.html:49 xk_html/xk_users.html:37
+msgid "Remark"
+msgstr "Remarks"
+
+#: xk_html/xk_dhcp_host.html:76 xk_html/xk_domain.html:36
+#: xk_html/xk_index.html:50 xk_html/xk_record.html:50 xk_html/xk_users.html:38
+msgid "Operation"
+msgstr "Operation"
+
+#: xk_html/xk_dhcp_host.html:103 xk_html/xk_dhcp_host.html:107
+#: xk_html/xk_dhcp_host.html:108 xk_html/xk_dhcp_host.html:205
+#: xk_html/xk_domain.html:63 xk_html/xk_domain.html:71
+#: xk_html/xk_domain.html:165 xk_html/xk_index.html:30 xk_html/xk_record.html:8
+#: xk_html/xk_record.html:24 xk_html/xk_record.html:36
+#: xk_html/xk_record.html:98 xk_html/xk_record.html:99
+#: xk_html/xk_record.html:148 xk_html/xk_record.html:172
+#: xk_html/xk_record.html:175 xk_html/xk_record.html:236
+#: xk_html/xk_top_nav.html:18
+msgid "records"
+msgstr "records"
+
+#: xk_html/xk_dhcp_host.html:106 xk_html/xk_dhcp_host.html:205
+#: xk_html/xk_domain.html:69 xk_html/xk_domain.html:165
+#: xk_html/xk_record.html:97 xk_html/xk_record.html:236
+#: xk_html/xk_users.html:75
+msgid "Edit"
+msgstr "Edit"
+
+#: xk_html/xk_dhcp_host.html:108 xk_html/xk_domain.html:71
+#: xk_html/xk_record.html:34 xk_html/xk_record.html:99 xk_html/xk_users.html:78
+msgid "Delete"
+msgstr "Delete"
+
+#: xk_html/xk_dhcp_host.html:179 xk_html/xk_dhcp_host.html:235
+#: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:133
+#: xk_html/xk_domain.html:185 xk_html/xk_index.html:128
+#: xk_html/xk_record.html:179 xk_html/xk_record.html:219
+#: xk_html/xk_record.html:259 xk_html/xk_users_logs.html:85
+msgid "Note: Internal Server Error"
+msgstr "Note: Internal Server Error"
+
+#: xk_html/xk_dhcp_pool.html:30
+msgid "DHCP Enable"
+msgstr "DHCP Enable"
+
+#: xk_html/xk_dhcp_pool.html:41 xk_html/xk_top_nav.html:24
+msgid "Address Pool"
+msgstr "Address Pool"
+
+#: xk_html/xk_dhcp_pool.html:48
+msgid "Subnet Mask"
+msgstr "Subnet Mask"
+
+#: xk_html/xk_dhcp_pool.html:72 xk_html/xk_dhcp_pool.html:158
+msgid "Gateway Address"
+msgstr "Gateway Address"
+
+#: xk_html/xk_dhcp_pool.html:78 xk_html/xk_dhcp_pool.html:102
+#: xk_html/xk_dhcp_pool.html:108 xk_html/xk_domain.html:25
+#: xk_html/xk_domain.html:31 xk_html/xk_domain.html:32
+#: xk_html/xk_domain.html:70 xk_html/xk_domain.html:71
+#: xk_html/xk_domain.html:107 xk_html/xk_domain.html:112
+#: xk_html/xk_domain.html:126 xk_html/xk_domain.html:129
+#: xk_html/xk_domain.html:144 xk_html/xk_index.html:27
+#: xk_html/xk_record.html:28 xk_html/xk_record.html:209
+msgid "Domain Name"
+msgstr "Domain Name"
+
+#: xk_html/xk_dhcp_pool.html:84
+msgid "Lease"
+msgstr "Lease"
+
+#: xk_html/xk_dhcp_pool.html:87 xk_html/xk_dhcp_pool.html:88
+#: xk_html/xk_dhcp_pool.html:89 xk_html/xk_dhcp_pool.html:90
+#: xk_html/xk_dhcp_pool.html:91 xk_html/xk_index.html:36
+msgid "hours"
+msgstr "hours"
+
+#: xk_html/xk_dhcp_pool.html:92 xk_html/xk_dhcp_pool.html:93
+#: xk_html/xk_dhcp_pool.html:94 xk_html/xk_dhcp_pool.html:95
+#: xk_html/xk_dhcp_pool.html:96 xk_html/xk_dhcp_pool.html:97
+#: xk_html/xk_index.html:36
+msgid "days"
+msgstr "days"
+
+#: xk_html/xk_domain.html:8 xk_html/xk_domain.html:21 xk_html/xk_nav.html:11
+#: xk_html/xk_top_nav.html:17
+msgid "Domain Management"
+msgstr "Domain Management"
+
+#: xk_html/xk_domain.html:33 xk_html/xk_record.html:47 xk_html/xk_users.html:35
+msgid "Created"
+msgstr "Created"
+
+#: xk_html/xk_domain.html:34 xk_html/xk_record.html:48 xk_html/xk_users.html:36
+msgid "Updated"
+msgstr "Updated"
+
+#: xk_html/xk_domain.html:92 xk_html/xk_record.html:133
+#: xk_html/xk_users.html:101 xk_html/xk_users_logs.html:56
+msgid "More"
+msgstr "More"
+
+#: xk_html/xk_index.html:8
+msgid "Console"
+msgstr "Console"
+
+#: xk_html/xk_index.html:22 xk_html/xk_nav.html:8 xk_html/xk_top_nav.html:12
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: xk_html/xk_index.html:33 xk_html/xk_top_nav.html:13 xk_html/xk_users.html:8
+#: xk_html/xk_users.html:21 xk_html/xk_users.html:77 xk_html/xk_users.html:78
+msgid "users"
+msgstr "users"
+
+#: xk_html/xk_index.html:36 xk_html/xk_index.html:90
+msgid "minute"
+msgstr "minute"
+
+#: xk_html/xk_index.html:42
+msgid "system message"
+msgstr "system message"
+
+#: xk_html/xk_index.html:47
+msgid "Refresh Data"
+msgstr "Refresh Data"
+
+#: xk_html/xk_index.html:48
+msgid "Restart the Server"
+msgstr "Restart the Server"
+
+#: xk_html/xk_index.html:49
+msgid "Shutdown the Server"
+msgstr "Shutdown the Server"
+
+#: xk_html/xk_index.html:54
+msgid "Outflow rate"
+msgstr "Outflow rate"
+
+#: xk_html/xk_index.html:54
+msgid "Inflow rate"
+msgstr "Inflow rate"
+
+#: xk_html/xk_index.html:57
+msgid "CPU usage is"
+msgstr "CPU usage is"
+
+#: xk_html/xk_index.html:61
+msgid "System idle rate"
+msgstr "System idle rate"
+
+#: xk_html/xk_index.html:67
+msgid "System Status"
+msgstr "System Status"
+
+#: xk_html/xk_index.html:83
+msgid "Reload"
+msgstr "Reload"
+
+#: xk_html/xk_index.html:84
+msgid "Restart service"
+msgstr "Restart service"
+
+#: xk_html/xk_index.html:84
+msgid "Restart"
+msgstr "Restart"
+
+#: xk_html/xk_index.html:86
+msgid "Version"
+msgstr "Version"
+
+#: xk_html/xk_index.html:89
+msgid "System Load"
+msgstr "System Load"
+
+#: xk_html/xk_index.html:93
+msgid "Disk Usage"
+msgstr "Disk Usage"
+
+#: xk_html/xk_index.html:97
+msgid "Memory Usage"
+msgstr "Memory Usage"
+
+#: xk_html/xk_index.html:117
+msgid "Operation Succeeded"
+msgstr "Operation Succeeded"
+
+#: xk_html/xk_index.html:121
+msgid "Operation Failed"
+msgstr "Operation Failed"
+
+#: xk_html/xk_index.html:124
+msgid "We encountered an unknown problem"
+msgstr "We encountered an unknown problem"
+
+#: xk_html/xk_login.html:14 xk_html/xk_users.html:31 xk_html/xk_users.html:114
+#: xk_html/xk_users_logs.html:31
+msgid "Username"
+msgstr "Username"
+
+#: xk_html/xk_nav.html:14 xk_html/xk_top_nav.html:15
+msgid "DNS Management"
+msgstr "DNS Management"
+
+#: xk_html/xk_nav.html:20
+msgid "Message Center"
+msgstr "Message Center"
+
+#: xk_html/xk_nav.html:23
+msgid "System Settings"
+msgstr "System Settings"
+
+#: xk_html/xk_nav.html:26
+msgid "Users"
+msgstr "Users"
+
+#: xk_html/xk_nav.html:29
+msgid "User Management"
+msgstr "User Management"
+
+#: xk_html/xk_nav.html:32 xk_html/xk_users.html:25
+msgid "Add User"
+msgstr "Add User"
+
+#: xk_html/xk_nav.html:35
+msgid "Log Management"
+msgstr "Log Management"
+
+#: xk_html/xk_nav.html:40
+msgid "Help"
+msgstr "Help"
+
+#: xk_html/xk_nav.html:43
+msgid "About"
+msgstr "About"
+
+#: xk_html/xk_nav.html:46
+msgid "About the project"
+msgstr "About the project"
+
+#: xk_html/xk_nav.html:49
+msgid "About the Author"
+msgstr "About the Author"
+
+#: xk_html/xk_record.html:43
+msgid "Host Record"
+msgstr "Host Record"
+
+#: xk_html/xk_record.html:44
+msgid "Record Type"
+msgstr "Record Type"
+
+#: xk_html/xk_record.html:45 xk_html/xk_record.html:153
+msgid "Record Values"
+msgstr "Record Values"
+
+#: xk_html/xk_record.html:46 xk_html/xk_record.html:158
+msgid "MX Priority"
+msgstr "MX Priority"
+
+#: xk_html/xk_top_nav.html:35
+msgid "Welcome"
+msgstr "Welcome!"
+
+#: xk_html/xk_users.html:32 xk_html/xk_users_logs.html:32
+msgid "Full name"
+msgstr "Full name"
+
+#: xk_html/xk_users.html:33
+msgid "Email Address"
+msgstr "Email Address"
+
+#: xk_html/xk_users.html:34
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: xk_html/xk_users.html:48 xk_html/xk_users.html:49 xk_html/xk_users.html:76
+#: xk_html/xk_users.html:120 xk_html/xk_users.html:126
+#: xk_html/xk_users.html:132
+msgid "Password"
+msgstr "Password"
+
+#: xk_html/xk_users.html:108 xk_html/xk_users_logs.html:30
+msgid "UID"
+msgstr "UID"
+
+#: xk_html/xk_users_logs.html:8 xk_html/xk_users_logs.html:21
+msgid "User Login Log"
+msgstr "User Login Log"
+
+#: xk_html/xk_users_logs.html:33
+msgid "Log in time"
+msgstr "Log in time"
+
+#: xk_html/xk_users_logs.html:34
+msgid "Log Host"
+msgstr "Log Host"
+
+#: xk_html/xk_users_logs.html:35
+msgid "Login Area"
+msgstr "Login Area"
+
+#: xk_html/xk_users_logs.html:36
+msgid "User Agent"
+msgstr "User Agent"
+

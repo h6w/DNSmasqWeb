@@ -10,6 +10,7 @@ import tornado.process
 import time
 from xk_config.xk_setting import *
 from xk_config.xk_url import *
+from tornadobabel import locale
 
 MainSetting = dict(
     template_path = 'xk_html',
@@ -41,12 +42,21 @@ class HttpApplication(tornado.web.Application):
         tornado.ioloop.PeriodicCallback(ping_db,3 * 60 * 1000).start()
         #tornado.ioloop.PeriodicCallback(print_test,1 * 30 * 1000).start()
 
+class ProfileHandler(TornadoBabelMixin, RequestHandler):
+    def get_user_locale(self):
+        if self.current_user:
+            return locale.get(self.current_user.locale)
+
+        # Fallback to browser based locale detection
+        return self.get_browser_locale()
+
 def main():
     if options.ipv6:
         host = None
     else:
         host = "0.0.0.0"
     tornado.options.parse_command_line()
+    load_gettext_translations('translations', 'messages')
 
     if options.debug:
         http_server = tornado.httpserver.HTTPServer(request_callback=HttpApplication(),xheaders=True)
