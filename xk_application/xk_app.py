@@ -10,7 +10,7 @@ import tornado.process
 import time
 from xk_config.xk_setting import *
 from xk_config.xk_url import *
-from tornadobabel import locale
+from tornadobabel import locale, TornadoBabelMixin
 
 MainSetting = dict(
     template_path = 'xk_html',
