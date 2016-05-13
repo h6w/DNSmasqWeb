@@ -43,7 +43,7 @@ class HttpApplication(tornado.web.Application):
         tornado.ioloop.PeriodicCallback(ping_db,3 * 60 * 1000).start()
         #tornado.ioloop.PeriodicCallback(print_test,1 * 30 * 1000).start()
 
-class ProfileHandler(TornadoBabelMixin, RequestHandler):
+class ProfileHandler(TornadoBabelMixin, tornado.web.RequestHandler):
     def get_user_locale(self):
         if self.current_user:
             return locale.get(self.current_user.locale)
