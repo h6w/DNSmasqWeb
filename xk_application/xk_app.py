@@ -57,7 +57,7 @@ def main():
     else:
         host = "0.0.0.0"
     tornado.options.parse_command_line()
-    load_gettext_translations('translations', 'messages')
+    locale.load_gettext_translations('translations', 'messages')
 
     if options.debug:
         http_server = tornado.httpserver.HTTPServer(request_callback=HttpApplication(),xheaders=True)
