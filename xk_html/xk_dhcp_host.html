@@ -86,7 +86,7 @@
 							<tr id="line_{{d['id']}}" class="error">
                             {% set st_msg = "开启" %}
                             {% set fun_value = "yes" %}
-                            {% end %}
+                            {% endif %}
                             {% if d['action'] == 'allow' %}
                                 {% set action = '已允许' %}
                                 {% set action_value = 'ignore' %}
@@ -95,7 +95,7 @@
                                 {% set action = '已禁止' %}
                                 {% set action_value = 'allow' %}
                                 {% set action_msg = "允许" %}
-                            {% end %}
+                            {% endif %}
 								<td><input type="checkbox"/> {{ loop.index }}</td>
                                 <td>{{ d['hostname'] }}</td>
                                 <td>{{ d['mac'] }}</td>
@@ -126,7 +126,7 @@
                                     <a href="javascript:void(0);" onclick="to_line({{d['id']}})">取消</a>
                                 </td>
                             </tr>
-                            {% end %}
+                            {% endfor %}
 						</tbody>
 					</table>
 				</div>

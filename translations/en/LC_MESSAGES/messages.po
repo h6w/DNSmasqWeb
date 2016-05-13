@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: tudor@tudorholton.com\n"
-"POT-Creation-Date: 2016-05-13 15:41+1000\n"
+"POT-Creation-Date: 2016-05-13 16:56+1000\n"
 "PO-Revision-Date: 2016-05-13 13:34+1000\n"
 "Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -32,7 +32,6 @@ msgid "Address Pool Management"
 msgstr "Address Pool Management"
 
 #: xk_html/xk_dhcp_host.html:29 xk_html/xk_dhcp_host.html:71
-#: xk_html/xk_index.html:46
 msgid "CPU Name"
 msgstr "CPU Name"
 
@@ -44,7 +43,7 @@ msgstr "MAC Address"
 
 #: xk_html/xk_dhcp_host.html:41 xk_html/xk_dhcp_host.html:73
 #: xk_html/xk_dhcp_host.html:152 xk_html/xk_dhcp_host.html:170
-#: xk_html/xk_dhcp_host.html:226 xk_html/xk_index.html:53
+#: xk_html/xk_dhcp_host.html:226
 msgid "IP Address"
 msgstr "IP Address"
 
@@ -56,17 +55,17 @@ msgstr "Action"
 #: xk_html/xk_dhcp_pool.html:114 xk_html/xk_domain.html:35
 #: xk_html/xk_record.html:49 xk_html/xk_users.html:37
 msgid "Remark"
-msgstr "Remarks"
+msgstr "Remark"
 
 #: xk_html/xk_dhcp_host.html:76 xk_html/xk_domain.html:36
-#: xk_html/xk_index.html:50 xk_html/xk_record.html:50 xk_html/xk_users.html:38
+#: xk_html/xk_record.html:50 xk_html/xk_users.html:38
 msgid "Operation"
 msgstr "Operation"
 
 #: xk_html/xk_dhcp_host.html:103 xk_html/xk_dhcp_host.html:107
 #: xk_html/xk_dhcp_host.html:108 xk_html/xk_dhcp_host.html:205
 #: xk_html/xk_domain.html:63 xk_html/xk_domain.html:71
-#: xk_html/xk_domain.html:165 xk_html/xk_index.html:30 xk_html/xk_record.html:8
+#: xk_html/xk_domain.html:165 xk_html/xk_record.html:8
 #: xk_html/xk_record.html:24 xk_html/xk_record.html:36
 #: xk_html/xk_record.html:98 xk_html/xk_record.html:99
 #: xk_html/xk_record.html:148 xk_html/xk_record.html:172
@@ -89,9 +88,9 @@ msgstr "Delete"
 
 #: xk_html/xk_dhcp_host.html:179 xk_html/xk_dhcp_host.html:235
 #: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:133
-#: xk_html/xk_domain.html:185 xk_html/xk_index.html:128
-#: xk_html/xk_record.html:179 xk_html/xk_record.html:219
-#: xk_html/xk_record.html:259 xk_html/xk_users_logs.html:85
+#: xk_html/xk_domain.html:185 xk_html/xk_record.html:179
+#: xk_html/xk_record.html:219 xk_html/xk_record.html:259
+#: xk_html/xk_users_logs.html:85
 msgid "Note: Internal Server Error"
 msgstr "Note: Internal Server Error"
 
@@ -117,8 +116,8 @@ msgstr "Gateway Address"
 #: xk_html/xk_domain.html:70 xk_html/xk_domain.html:71
 #: xk_html/xk_domain.html:107 xk_html/xk_domain.html:112
 #: xk_html/xk_domain.html:126 xk_html/xk_domain.html:129
-#: xk_html/xk_domain.html:144 xk_html/xk_index.html:27
-#: xk_html/xk_record.html:28 xk_html/xk_record.html:209
+#: xk_html/xk_domain.html:144 xk_html/xk_record.html:28
+#: xk_html/xk_record.html:209
 msgid "Domain Name"
 msgstr "Domain Name"
 
@@ -128,14 +127,13 @@ msgstr "Lease"
 
 #: xk_html/xk_dhcp_pool.html:87 xk_html/xk_dhcp_pool.html:88
 #: xk_html/xk_dhcp_pool.html:89 xk_html/xk_dhcp_pool.html:90
-#: xk_html/xk_dhcp_pool.html:91 xk_html/xk_index.html:36
+#: xk_html/xk_dhcp_pool.html:91
 msgid "hours"
 msgstr "hours"
 
 #: xk_html/xk_dhcp_pool.html:92 xk_html/xk_dhcp_pool.html:93
 #: xk_html/xk_dhcp_pool.html:94 xk_html/xk_dhcp_pool.html:95
 #: xk_html/xk_dhcp_pool.html:96 xk_html/xk_dhcp_pool.html:97
-#: xk_html/xk_index.html:36
 msgid "days"
 msgstr "days"
 
@@ -157,103 +155,14 @@ msgstr "Updated"
 msgid "More"
 msgstr "More"
 
-#: xk_html/xk_index.html:8
-msgid "Console"
-msgstr "Console"
-
-#: xk_html/xk_index.html:22 xk_html/xk_nav.html:8 xk_html/xk_top_nav.html:12
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: xk_html/xk_index.html:33 xk_html/xk_top_nav.html:13 xk_html/xk_users.html:8
-#: xk_html/xk_users.html:21 xk_html/xk_users.html:77 xk_html/xk_users.html:78
-msgid "users"
-msgstr "users"
-
-#: xk_html/xk_index.html:36 xk_html/xk_index.html:90
-msgid "minute"
-msgstr "minute"
-
-#: xk_html/xk_index.html:42
-msgid "system message"
-msgstr "system message"
-
-#: xk_html/xk_index.html:47
-msgid "Refresh Data"
-msgstr "Refresh Data"
-
-#: xk_html/xk_index.html:48
-msgid "Restart the Server"
-msgstr "Restart the Server"
-
-#: xk_html/xk_index.html:49
-msgid "Shutdown the Server"
-msgstr "Shutdown the Server"
-
-#: xk_html/xk_index.html:54
-msgid "Outflow rate"
-msgstr "Outflow rate"
-
-#: xk_html/xk_index.html:54
-msgid "Inflow rate"
-msgstr "Inflow rate"
-
-#: xk_html/xk_index.html:57
-msgid "CPU usage is"
-msgstr "CPU usage is"
-
-#: xk_html/xk_index.html:61
-msgid "System idle rate"
-msgstr "System idle rate"
-
-#: xk_html/xk_index.html:67
-msgid "System Status"
-msgstr "System Status"
-
-#: xk_html/xk_index.html:83
-msgid "Reload"
-msgstr "Reload"
-
-#: xk_html/xk_index.html:84
-msgid "Restart service"
-msgstr "Restart service"
-
-#: xk_html/xk_index.html:84
-msgid "Restart"
-msgstr "Restart"
-
-#: xk_html/xk_index.html:86
-msgid "Version"
-msgstr "Version"
-
-#: xk_html/xk_index.html:89
-msgid "System Load"
-msgstr "System Load"
-
-#: xk_html/xk_index.html:93
-msgid "Disk Usage"
-msgstr "Disk Usage"
-
-#: xk_html/xk_index.html:97
-msgid "Memory Usage"
-msgstr "Memory Usage"
-
-#: xk_html/xk_index.html:117
-msgid "Operation Succeeded"
-msgstr "Operation Succeeded"
-
-#: xk_html/xk_index.html:121
-msgid "Operation Failed"
-msgstr "Operation Failed"
-
-#: xk_html/xk_index.html:124
-msgid "We encountered an unknown problem"
-msgstr "We encountered an unknown problem"
-
 #: xk_html/xk_login.html:14 xk_html/xk_users.html:31 xk_html/xk_users.html:114
 #: xk_html/xk_users_logs.html:31
 msgid "Username"
 msgstr "Username"
+
+#: xk_html/xk_nav.html:8 xk_html/xk_top_nav.html:12
+msgid "Dashboard"
+msgstr "Dashboard"
 
 #: xk_html/xk_nav.html:14 xk_html/xk_top_nav.html:15
 msgid "DNS Management"
@@ -267,9 +176,10 @@ msgstr "Message Center"
 msgid "System Settings"
 msgstr "System Settings"
 
-#: xk_html/xk_nav.html:26
-msgid "Users"
-msgstr "Users"
+#: xk_html/xk_nav.html:26 xk_html/xk_top_nav.html:13 xk_html/xk_users.html:8
+#: xk_html/xk_users.html:21 xk_html/xk_users.html:77 xk_html/xk_users.html:78
+msgid "users"
+msgstr "users"
 
 #: xk_html/xk_nav.html:29
 msgid "User Management"
@@ -361,3 +271,14 @@ msgstr "Login Area"
 msgid "User Agent"
 msgstr "User Agent"
 
+#: xk_html/xk_users_logs.html:67
+msgid "Confirm you want to clear all login log"
+msgstr "Confirm you want to clear all login log"
+
+#: xk_html/xk_users_logs.html:77
+msgid "Clear log success"
+msgstr "Clear log success"
+
+#: xk_html/xk_users_logs.html:80
+msgid "Note: Clear log failure"
+msgstr "Note: Clear log failure"

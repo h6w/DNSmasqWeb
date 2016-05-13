@@ -62,7 +62,7 @@
 							<tr id="line_{{u['id']}}" class="error">
                             {% set st_msg = "启用" %}
                             {% set fun_value = "yes" %}
-                            {% end %}
+                            {% endif %}
 								<td>{{ loop.index }}</td>
                                 <td>{{ u['username'] }}</td>
                                 <td>{{ u['name'] }}</td>
@@ -93,7 +93,7 @@
                                     <a href="javascript:void(0);" onclick="to_line({{u['id']}})">取消</a>
                                 </td>
                             </tr>
-                            {% end %}
+                            {% endfor %}
 						</tbody>
 					</table>
                     <ul class="pager">

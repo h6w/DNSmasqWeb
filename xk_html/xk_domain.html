@@ -58,7 +58,7 @@
 							<tr id="line_{{d['id']}}" class="error">
                             {% set st_msg = "开启" %}
                             {% set fun_value = "yes" %}
-                            {% end %}
+                            {% endif %}
 								<td><input type="checkbox"/> {{ loop.index }}</td>
                                 <td><a href="record?did={{d['id']}}" title="查看 {{d['domain']}} 的DNS{{ _('records') }}">{{ d['domain'] }}</a></td>
                                 <td title="MD5：{{ d['file_md5'] }}">{{ d['file'] }}</td>
@@ -84,7 +84,7 @@
                                     <a href="javascript:void(0);" onclick="to_line({{d['id']}})">取消</a>
                                 </td>
                             </tr>
-                            {% end %}
+                            {% endfor %}
 						</tbody>
 					</table>
 					<ul class="pager">

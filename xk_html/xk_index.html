@@ -77,7 +77,7 @@
                                 {% set st_msg = '{{ _('service exception') }}' %}
                                 {% set next_run = 'start' %}
                                 {% set next_run_msg = '{{ _('Start') }}' %}
-                            {% end %}
+                            {% endif %}
 							<i class="icon-asterisk"></i>
                             <a class="title" href="javascript:void(0);" onclick="alert('DNSmasq {{st_msg}}')">DNSmasq</a>　<font color="{{st_color}}">{{st_msg}}</font>　
                             <a class="btn btn-success" href="javascript:void(0);" title="重新加载服务配置" onclick="run_sevice('reload')">{{ _('Reload') }}</a>

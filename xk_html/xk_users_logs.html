@@ -48,7 +48,7 @@
                                 <td>{{ log['login_localtion'] or '' }}</td>
                                 <td title="{{log['user_agent']}}">{{ log['user_agent'] | truncate(40)}}</td>
 							</tr>
-                            {% end %}
+                            {% endfor %}
 						</tbody>
 					</table>
 					<ul class="pager">
@@ -64,7 +64,7 @@
 		<script src="/xk_static/js/xk_dnsmasqweb.js"></script>
         <script type="text/javascript">
             function clear_logs() {
-                if ( ! confirm("确认要清除所有登录日志吗？") ) {
+                if ( ! confirm("{{ _('Confirm you want to clear all login log') }}？") ) {
                     return false;
                 };
                 $.ajax({
@@ -74,10 +74,10 @@
                     dataType: "text",
                     success: function(msg){
                         if (msg == "1") {
-                            alert("清除日志成功！");
+                            alert("{{ _('Clear log success') }}！");
                             location.href="/users/logs";
                         } else {
-                            alert("提示：清除日志失败！");
+                            alert("{{ _('Note: Clear log failure') }}！");
                             return false;
                         }
                         },
