@@ -19,8 +19,8 @@
 				<div class="span10">
 					<h4>DHCP{{ _('Binding Rules') }} | <a href="/dhcp/pool">{{ _('Address Pool Management') }}</a></h4>
                     <div class="pull-right">
-                        <input type="button" class="btn btn-primary" value="添加规则" onclick="show_add();">
-                        <input type="button" class="btn btn-warning" value="刷新配置" onclick="reload_dhcp('normal')">
+                        <input type="button" class="btn btn-primary" value="{{ _('Add rule') }}" onclick="show_add();">
+                        <input type="button" class="btn btn-warning" value="{{ _('Refresh configuration') }}" onclick="reload_dhcp('normal')">
                     </div><br /><br />
 
                     <form class="form-horizontal display_no" id="add_line" method="post">
@@ -44,22 +44,22 @@
 								</div>
 							</div>
                             <div class="control-group">
-								<label class="control-label" for="action">规则{{ _('Action') }}</label>
+								<label class="control-label" for="action">{{ _('Rule Action') }}</label>
 								<div class="controls">
 									<select name="action" id="action">
-                                        <option value="allow">允许</option>
-                                        <option value="ignore">禁止</option>
+                                        <option value="allow">{{ _('Allow') }}</option>
+                                        <option value="ignore">{{ _('Ignore') }}</option>
 									</select>
 								</div>
 							</div>
                             <div class="control-group">
-								<label class="control-label" for="comment">{{ _('Remark') }}信息</label>
+								<label class="control-label" for="comment">{{ _('Comment') }}</label>
 								<div class="controls">
 									<input type="text" class="input-xlarge" id="comment" name="comment" />
 								</div>
 							</div>
 							<div class="form-actions">
-								<a href="javascript:void(0)" class="btn" onclick="cancel_add();">取消</a>　　<a href="javascript:void(0);" class="btn btn-primary" onclick="add_dhcp_host()">保存</a>
+								<a href="javascript:void(0)" class="btn" onclick="cancel_add();">{{ _('Cancel') }}</a>  <a href="javascript:void(0);" class="btn btn-primary" onclick="add_dhcp_host()">{{ _('Save') }}</a>
 							</div>
 						</fieldset>
 					</form>
@@ -80,35 +80,35 @@
                             {% for d in dhcp_hosts %}
                             {% if d['status'] == 'yes' %}
                             <tr id="line_{{d['id']}}">
-                            {% set st_msg = "暂停" %}
+                            {% set st_msg = "{{ _('time out') }}" %}
                             {% set fun_value = "no" %}
                             {% else %}
 							<tr id="line_{{d['id']}}" class="error">
-                            {% set st_msg = "开启" %}
+                            {% set st_msg = "{{ _('open') }}" %}
                             {% set fun_value = "yes" %}
                             {% endif %}
                             {% if d['action'] == 'allow' %}
-                                {% set action = '已允许' %}
+                                {% set action = '{{ _('Allowed') }}' %}
                                 {% set action_value = 'ignore' %}
-                                {% set action_msg = "禁止" %}
+                                {% set action_msg = "{{ _('Ignore') }}" %}
                             {% else %}
-                                {% set action = '已禁止' %}
+                                {% set action = '{{ _('Ignored') }}' %}
                                 {% set action_value = 'allow' %}
-                                {% set action_msg = "允许" %}
+                                {% set action_msg = "{{ _('Allow') }}" %}
                             {% endif %}
 								<td><input type="checkbox"/> {{ loop.index }}</td>
                                 <td>{{ d['hostname'] }}</td>
                                 <td>{{ d['mac'] }}</td>
                                 <td>{{ d['ip'] }}</td>
-                                <td><a href="/public/api?module=dhcp_host&fun=ch_action&id={{d['id']}}&value={{action_value}}" onclick="return confirm('确认{{action_msg}}该{{ _('records') }}？');" title="点击{{action_msg}}该{{ _('records') }}">{{ action }}</a></td>
+                                <td><a href="/public/api?module=dhcp_host&fun=ch_action&id={{d['id']}}&value={{action_value}}" onclick="return confirm('{{ _('Confirm') }}{{action_msg}}{{ _('this record?') }}');" title="{{ _('Click') }}{{action_msg}}{{ _('this record') }}">{{ action }}</a></td>
                                 <td>{{ d['comment'] or '' }}</td>
                                 <td>
                                     <a href="javascript:void(0);" onclick="to_edit({{d['id']}})">{{ _('Edit') }}</a> |
-                                    <a href="/public/api?module=dhcp_host&fun=ch_status&id={{d['id']}}&value={{fun_value}}" onclick="return confirm('确认{{st_msg}}{{ _('records') }}？');">{{st_msg}}</a> |
-                                    <a href="/public/api?module=dhcp_host&fun=del&id={{d['id']}}" onclick="return confirm('确认{{ _('Delete') }}该{{ _('records') }}？');">{{ _('Delete') }}</a>
+                                    <a href="/public/api?module=dhcp_host&fun=ch_status&id={{d['id']}}&value={{fun_value}}" onclick="return confirm('{{ _('Confirm') }}{{st_msg}}{{ _('records') }}?');">{{st_msg}}</a> |
+                                    <a href="/public/api?module=dhcp_host&fun=del&id={{d['id']}}" onclick="return confirm('{{ _('Delete these records') }}?');">{{ _('Delete') }}</a>
                                 </td>
 							</tr>
-                            {# 可{{ _('Edit') }}状态 #}
+                            {# {{ _('Editable') }} #}
                             <tr id="edit_line_{{d['id']}}" class="display_no">
                                 <td><input type="checkbox"/> {{ loop.index }}</td>
                                 <td><input type="text" class="input-medium" value="{{d['hostname']}}" name="hostname_{{d['id']}}" id="hostname_{{d['id']}}"></td>
@@ -116,14 +116,14 @@
                                 <td><input type="text" class="input-medium" value="{{d['ip']}}" name="ip_{{d['id']}}" id="ip_{{d['id']}}"></td>
                                 <td>
                                     <select name="action_{{d['id']}}" id="action_{{d['id']}}" style="width: 70px">
-                                        <option value="allow" {{d['allow_selected']}}>允许</option>
-                                        <option value="ignore" {{d['ignore_selected']}}>禁止</option>
+                                        <option value="allow" {{d['allow_selected']}}>{{ _('Allow') }}</option>
+                                        <option value="ignore" {{d['ignore_selected']}}>{{ _('Ignore') }}</option>
                                     </select>
                                 </td>
                                 <td><input type="text" class="input-medium" value="{{d['comment'] or ''}}" name="comment_{{d['id']}}" id="comment_{{d['id']}}"></td>
                                 <td>
-                                    <a href="javascript:void(0);" onclick="save_info({{d['id']}});">保存</a> |
-                                    <a href="javascript:void(0);" onclick="to_line({{d['id']}})">取消</a>
+                                    <a href="javascript:void(0);" onclick="save_info({{d['id']}});">{{ _('Save') }}</a> |
+                                    <a href="javascript:void(0);" onclick="to_line({{d['id']}})">{{ _('Cancel') }}</a>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -144,12 +144,12 @@
                 action = $("#action").val();
                 comment = $("#comment").val();
                 if ( mac == '') {
-                    alert("请输入{{ _('MAC Address') }}！");
+                    alert("{{ _('Please enter MAC address!') }}");
                     $("#mac").focus();
                     return false;
                 };
                 if ( ip == '') {
-                    alert("请输入{{ _('IP Address') }}！");
+                    alert("{{ _('Please enter IP address!') }}");
                     $("#ip").focus();
                     return false;
                 };
@@ -160,23 +160,23 @@
                     dataType: "text",
                     success: function(msg){
                         if (msg == "1") {
-                            alert("添加成功！");
+                            alert("{{ _('Added successfully') }}!");
                             window.location.href="/dhcp/host";
                         } else if (msg == "2") {
-                            alert("{{ _('MAC Address') }}已存在！");
+                            alert("{{ _('MAC address already exists!') }}");
                             $("#mac").focus();
                             return false;
                         } else if (msg == "3") {
-                            alert("{{ _('IP Address') }}已存在！");
+                            alert("{{ _('IP address already exists!') }}");
                             $("#ip").focus();
                             return false;
                         } else {
-                            alert("提示：添加规则失败！");
+                            alert("{{ _('Alert') }}:{{ _('Add rule failed!') }}");
                             return false;
                         }
                         },
                     error:function(){
-                        alert("{{ _('Note: Internal Server Error') }}！");
+                        alert("{{ _('Note: Internal Server Error') }}!");
                         return false;
                         },
                     });
@@ -202,7 +202,7 @@
                 $(show_id).removeClass("display_no");
                 $(edit_id).addClass("display_no");
             };
-            /* {{ _('Edit') }}保存{{ _('records') }} */
+            /* {{ _('Edit saved records') }} */
             function save_info(id){
                 hostname = $("#hostname_"+id).val();
                 mac = $("#mac_"+id).val();
@@ -216,23 +216,23 @@
                     dataType: "text",
                     success: function(msg){
                         if (msg == "1") {
-                            alert("修改成功！");
+                            alert("{{ _('Successfully modified') }}!");
                             location.href="/dhcp/host";
                         } else if (msg == "2") {
-                            alert("{{ _('MAC Address') }}已存在！");
+                            alert("{{ _('MAC address already exists!') }}");
                             $("#mac_"+id).focus();
                             return false;
                         } else if (msg == "3") {
-                            alert("{{ _('IP Address') }}已存在！");
+                            alert("{{ _('IP address already exists!') }}");
                             $("#ip_"+ip).focus();
                             return false;
                         } else {
-                            alert("提示：修改失败！");
+                            alert("{{ _('Alert') }}:{{ _('Failed to edit') }}!");
                             return false;
                         }
                         },
                     error:function(){
-                        alert("{{ _('Note: Internal Server Error') }}！");
+                        alert("{{ _('Note: Internal Server Error') }}!");
                         return false;
                         },
                     });

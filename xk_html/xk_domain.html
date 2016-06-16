@@ -21,15 +21,15 @@
 						{{ _('Domain Management') }}
 					</h4>
                     <div class="pull-right">
-                        <input type="button" class="btn btn-warning" value="同步解析" onclick="rsync_dns();">
-                        <input type="button" class="btn btn-primary" value="添加{{ _('Domain Name') }}" onclick="show_add();">
+                        <input type="button" class="btn btn-warning" value="{{ _('Synchronize') }}" onclick="rsync_dns();">
+                        <input type="button" class="btn btn-primary" value="{{ _('Add Domain Name') }}" onclick="show_add();">
                     </div><br /><br />
 					<table class="table table-bordered table-striped table-hover table-condensed">
 						<thead>
 							<tr>
 								<th><input type="checkbox" id="checkbox_all"> #</th>
                                 <th>{{ _('Domain Name') }}</th>
-								<th title="MD5：b21a3666b180025da9ea2467b4dffba2">{{ _('Domain Name') }}文件</th>
+								<th title="MD5:b21a3666b180025da9ea2467b4dffba2">{{ _('Domain Name Record') }}</th>
 								<th>{{ _('Created') }}</th>
 								<th>{{ _('Updated') }}</th>
 								<th>{{ _('Remark') }}</th>
@@ -45,33 +45,33 @@
                                 <td>{{get_time()}}</td>
                                 <td><input type="text" name="comment" id="comment"  class="input-medium"></td>
 								<td>
-                                    <a href="javascript:void(0);" class="view-link" onclick="add_domain();">保存</a> |
-                                    <a href="javascript:void(0);" class="view-link" onclick="cancel_add();">取消</a>
+                                    <a href="javascript:void(0);" class="view-link" onclick="add_domain();">{{ _('Save') }}</a> |
+                                    <a href="javascript:void(0);" class="view-link" onclick="cancel_add();">{{ _('Cancel') }}</a>
                                 </td>
 							</tr>
                             {% for d in domains %}
                             {% if d['status'] == 'yes' %}
                             <tr id="line_{{d['id']}}">
-                            {% set st_msg = "暂停" %}
+                            {% set st_msg = "{{ _('time out') }}" %}
                             {% set fun_value = "no" %}
                             {% else %}
 							<tr id="line_{{d['id']}}" class="error">
-                            {% set st_msg = "开启" %}
+                            {% set st_msg = "{{ _('open') }}" %}
                             {% set fun_value = "yes" %}
                             {% endif %}
 								<td><input type="checkbox"/> {{ loop.index }}</td>
-                                <td><a href="record?did={{d['id']}}" title="查看 {{d['domain']}} 的DNS{{ _('records') }}">{{ d['domain'] }}</a></td>
-                                <td title="MD5：{{ d['file_md5'] }}">{{ d['file'] }}</td>
+                                <td><a href="record?did={{d['id']}}" title="{{ _('View') }} {{d['domain']}} {{ _('of') }}DNS{{ _('records') }}">{{ d['domain'] }}</a></td>
+                                <td title="MD5:{{ d['file_md5'] }}">{{ d['file'] }}</td>
                                 <td>{{ d['create_time'] }}</td>
                                 <td>{{ d['up_time'] }}</td>
                                 <td>{{ d['comment'] or '' }}</td>
                                 <td>
                                     <a href="javascript:void(0);" onclick="to_edit({{d['id']}})">{{ _('Edit') }}</a> |
-                                    <a href="/public/api?module=domain&fun=ch_status&id={{d['id']}}&value={{fun_value}}" onclick="return confirm('确认{{st_msg}}该{{ _('Domain Name') }}？');">{{st_msg}}</a> |
-                                    <a href="/public/api?module=domain&fun=del&id={{d['id']}}" onclick="return confirm('确认{{ _('Delete') }}该{{ _('Domain Name') }}，并且同时{{ _('Delete') }}该{{ _('Domain Name') }}所有{{ _('records') }}？');">{{ _('Delete') }}</a>
+                                    <a href="/public/api?module=domain&fun=ch_status&id={{d['id']}}&value={{fun_value}}" onclick="return confirm('{{ _('Confirm') }}{{st_msg}}{{ _('this domain name?') }}');">{{st_msg}}</a> |
+                                    <a href="/public/api?module=domain&fun=del&id={{d['id']}}" onclick="return confirm('{{ _('Delete this domain name and all related records') }}?');">{{ _('Delete') }}</a>
                                 </td>
 							</tr>
-                            {# 可{{ _('Edit') }}状态 #}
+                            {# {{ _('Editable') }} #}
                             <tr id="edit_line_{{d['id']}}" class="display_no">
                                 <td><input type="checkbox"> {{loop.index}}</td>
                                 <td><input type="text" class="input-medium" value="{{d['domain']}}" name="domain_{{d['id']}}" id="domain_{{d['id']}}" onkeyup="set_file_value('domain_'+{{d['id']}},'file_'+{{d['id']}});"></td>
@@ -80,8 +80,8 @@
                                 <td>{{d['up_time']}}</td>
                                 <td><input type="text" class="input-medium" value="{{d['comment'] or ''}}" name="comment_{{d['id']}}" id="comment_{{d['id']}}"></td>
                                 <td>
-                                    <a href="javascript:void(0);" onclick="save_info({{d['id']}});">保存</a> |
-                                    <a href="javascript:void(0);" onclick="to_line({{d['id']}})">取消</a>
+                                    <a href="javascript:void(0);" onclick="save_info({{d['id']}});">{{ _('Save') }}</a> |
+                                    <a href="javascript:void(0);" onclick="to_line({{d['id']}})">{{ _('Cancel') }}</a>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -104,12 +104,12 @@
                 file = $("#file").val();
                 comment = $("#comment").val();
                 if ( domain == '') {
-                    alert("请输入{{ _('Domain Name') }}！");
+                    alert("{{ _('Please enter Domain Name!') }}");
                     $("#domain").focus();
                     return false;
                 };
                 if ( file == '') {
-                    alert("请输入{{ _('Domain Name') }}文件！");
+                    alert("{{ _('Please enter Domain Name Record!') }}");
                     $("#file").focus();
                     return false;
                 };
@@ -120,17 +120,17 @@
                     dataType: "text",
                     success: function(msg){
                         if (msg == "1") {
-                            alert("添加成功！");
+                            alert("{{ _('Added successfully') }}!");
                             window.location.href="/dns/domain";
                         } else if (msg == "2") {
-                            alert("{{ _('Domain Name') }}已存在！");
+                            alert("{{ _('Domain name already exists!') }}");
                             $("#domain").focus();
                         } else {
-                            alert("提示：添加{{ _('Domain Name') }}失败！");
+                            alert("{{ _('Alert') }}:{{ _('Add domain name failed!') }}");
                         }
                         },
                     error:function(){
-                        alert("{{ _('Note: Internal Server Error') }}！");
+                        alert("{{ _('Note: Internal Server Error') }}!");
                         },
                     });
             };
@@ -141,7 +141,7 @@
             function cancel_add(){
                 $("#add_line").addClass("display_no");
             };
-            /* 同步动态输入{{ _('Domain Name') }}配置文件 */
+            /* {{ _('Enter the domain profile') }} */
             function set_file_value(id1,id2){
                 d = $("#"+id1).val();
                 if ( d != '' ) {
@@ -162,7 +162,7 @@
                 $(show_id).removeClass("display_no");
                 $(edit_id).addClass("display_no");
             };
-            /* {{ _('Edit') }}保存{{ _('records') }} */
+            /* {{ _('Edit saved records') }} */
             function save_info(id){
                 domain = $("#domain_"+id).val();
                 file = $("#file_"+id).val();
@@ -174,15 +174,15 @@
                     dataType: "text",
                     success: function(msg){
                         if (msg == "1") {
-                            alert("修改成功！");
+                            alert("{{ _('Successfully modified') }}!");
                             location.href="/dns/domain";
                         } else {
-                            alert("提示：修改失败！");
+                            alert("{{ _('Alert') }}:{{ _('Failed to edit') }}!");
                             return false;
                         }
                         },
                     error:function(){
-                        alert("{{ _('Note: Internal Server Error') }}！");
+                        alert("{{ _('Note: Internal Server Error') }}!");
                         return false;
                         },
                     });

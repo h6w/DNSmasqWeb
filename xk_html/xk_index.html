@@ -33,7 +33,7 @@
 								<a href="/users"><span class="count">2</span> {{ _('users') }}</a>
 							</li>
 							<li class="last">
-								<a href="javascript:void(0);"><span class="count">{{data['uptime']['days']}}{{ _('days') }}{{data['uptime']['hours']}}{{ _('hours') }}{{data['uptime']['minutes']}}{{ _('minute') }}</span> 运行时间</a>
+								<a href="javascript:void(0);"><span class="count">{{data['uptime']['days']}}{{ _('days') }}{{data['uptime']['hours']}}{{ _('hours') }}{{data['uptime']['minutes']}}{{ _('minute') }}</span> {{ _('uptime') }}</a>
 							</li>
 						</ul>
 					</div>
@@ -47,7 +47,7 @@
                             <a class="btn btn-success" href="javascript:void(0);" title="{{ _('Refresh Data') }}" onclick="location.reload()">Refresh</a>
                             <a class="btn btn-warning" href="javascript:void(0);" title="{{ _('Restart the Server') }}">Reboot</a>
                             <a class="btn btn-danger" href="javascript:void(0);" title="{{ _('Shutdown the Server') }}">Shutdown</a>
-                            <span class="meta">{{ _('Operation') }}系统 <em>{{data['os']}}</em></span>
+                            <span class="meta">{{ _('Operating System') }} <em>{{data['os']}}</em></span>
 						</li>
 						<li>
 							<i class="icon-map-marker"></i> <a class="title" href="javascript:void(0);">{{ _('IP Address') }}</a> {{data['ip']}}
@@ -79,10 +79,10 @@
                                 {% set next_run_msg = '{{ _('Start') }}' %}
                             {% endif %}
 							<i class="icon-asterisk"></i>
-                            <a class="title" href="javascript:void(0);" onclick="alert('DNSmasq {{st_msg}}')">DNSmasq</a>　<font color="{{st_color}}">{{st_msg}}</font>　
-                            <a class="btn btn-success" href="javascript:void(0);" title="重新加载服务配置" onclick="run_sevice('reload')">{{ _('Reload') }}</a>
+                            <a class="title" href="javascript:void(0);" onclick="alert('DNSmasq {{st_msg}}')">DNSmasq</a> <font color="{{st_color}}">{{st_msg}}</font> 
+                            <a class="btn btn-success" href="javascript:void(0);" title="{{ _('Reload configuration') }}" onclick="run_sevice('reload')">{{ _('Reload') }}</a>
                             <a class="btn btn-warning" href="javascript:void(0);" title="{{ _('Restart service') }}" onclick="run_sevice('restart')">{{ _('Restart') }}</a>
-                            <a class="btn btn-danger" href="javascript:void(0);" title="{{next_run_msg}}服务" onclick="run_sevice('{{next_run}}')">{{next_run | title}}</a>
+                            <a class="btn btn-danger" href="javascript:void(0);" title="{{next_run_msg}}{{ _('service') }}" onclick="run_sevice('{{next_run}}')">{{next_run | title}}</a>
                             <span class="meta">{{ _('Version') }} <em>{{data['dnsmasq']['version']}}</em></span>
 						</li>
 						<li>
@@ -90,11 +90,11 @@
                             <span class="meta">1{{ _('minute') }} <em>{{data['load'][0]}}</em> | 5{{ _('minute') }} <em>{{data['load'][1]}}</em> | 15{{ _('minute') }} <em>{{data['load'][2]}}</em></span>
 						</li>
                         <li>
-							<i class="icon-hdd"></i> <a class="title" href="javascript:void(0);">{{ _('Disk Usage') }}</a>　{{format_size(data['hdd']['used'])}} / {{format_size(data['hdd']['all'])}} ｜ {{data['hdd']['usedPercent']}}%
+							<i class="icon-hdd"></i> <a class="title" href="javascript:void(0);">{{ _('Disk Usage') }}</a> {{format_size(data['hdd']['used'])}} / {{format_size(data['hdd']['all'])}} | {{data['hdd']['usedPercent']}}%
                             <div class="progress" title="{{data['hdd']['usedPercent']}}%"><div class="bar" style="width: {{data['hdd']['usedPercent']}}%;"></div></div>
 						</li>
                         <li>
-							<i class="icon-road"></i> <a class="title" href="javascript:void(0);">{{ _('Memory Usage') }}</a>　{{format_size(data['mem']['MemUsed'])}} / {{format_size(data['mem']['MemTotal'])}} ｜ {{data['mem']['MemUsedPercent']}}%
+							<i class="icon-road"></i> <a class="title" href="javascript:void(0);">{{ _('Memory Usage') }}</a> {{format_size(data['mem']['MemUsed'])}} / {{format_size(data['mem']['MemTotal'])}} | {{data['mem']['MemUsedPercent']}}%
                             <div class="progress" title="{{data['mem']['MemUsedPercent']}}%"><div class="bar" style="width: {{data['mem']['MemUsedPercent']}}%;"></div></div>
 						</li>
 					</ul>
@@ -114,18 +114,18 @@ function run_sevice(fun) {
         dataType: "text",
         success: function (msg) {
             if (msg == "0") {
-                alert("{{ _('Operation Succeeded') }}！");
+                alert("{{ _('Operation Succeeded') }}!");
                 location.reload();
                 return true;
             } else if (msg == "1") {
-                alert("{{ _('Operation Failed') }}！");
+                alert("{{ _('Operation Failed') }}!");
                 return false;
             } else {
-                alert("{{ _('We encountered an unknown problem') }}！");
+                alert("{{ _('We encountered an unknown problem') }}!");
             }
         },
         error: function () {
-            alert("{{ _('Note: Internal Server Error') }}！");
+            alert("{{ _('Note: Internal Server Error') }}!");
         },
     });
 };

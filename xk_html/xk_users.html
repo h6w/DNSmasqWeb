@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="DnsMasqWeb - Desgin By Xiaok">
 		<meta name="author" content="Xiaok">
-		<title>{{ _('users') }}管理 - DnsMasqWeb - Desgin By Xiaok</title>
+		<title>{{ _('User Management') }} - DnsMasqWeb - Desgin By Xiaok</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="/xk_static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/xk_static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
 				{% include "xk_nav.html" %}
 				<div class="span10">
 					<h4>
-						{{ _('users') }}管理
+						{{ _('User Management') }}
 					</h4>
                     <div id="userlist">
                     <div class="pull-right">
@@ -46,11 +46,11 @@
                                 <td><input type="text" name="email" id="email"  class="input-mini"></td>
                                 <td><input type="text" name="mobile" id="mobile"  class="input-mini"></td>
                                 <td>{{ _('Password') }} <input type="password" name="password" id="password"  class="input-mini"></td>
-                                <td>确认{{ _('Password') }} <input type="password" name="password2" id="password2"  class="input-mini"></td>
+                                <td>{{ _('Confirm Password') }} <input type="password" name="password2" id="password2"  class="input-mini"></td>
                                 <td><input type="text" name="comment" id="comment"  class="input-mini"></td>
 								<td>
-                                    <a href="javascript:void(0);" class="view-link" onclick="add_user();">保存</a> |
-                                    <a href="javascript:void(0);" class="view-link" onclick="cancel_add();">取消</a>
+                                    <a href="javascript:void(0);" class="view-link" onclick="add_user();">{{ _('Save') }}</a> |
+                                    <a href="javascript:void(0);" class="view-link" onclick="cancel_add();">{{ _('Cancel') }}</a>
                                 </td>
 							</tr>
                             {% for u in users %}
@@ -60,7 +60,7 @@
                             {% set fun_value = "no" %}
                             {% else %}
 							<tr id="line_{{u['id']}}" class="error">
-                            {% set st_msg = "启用" %}
+                            {% set st_msg = "{{ _('Enable') }}" %}
                             {% set fun_value = "yes" %}
                             {% endif %}
 								<td>{{ loop.index }}</td>
@@ -74,11 +74,11 @@
                                 <td>
                                     <a href="javascript:void(0);" onclick="to_edit({{u['id']}})">{{ _('Edit') }}</a> |
                                     <a href="javascript:void(0);" onclick="ch_pass({{u['id']}},'{{u['username']}}')">{{ _('Password') }}</a> |
-                                    <a href="/public/api?module=users&fun=ch_status&id={{u['id']}}&value={{fun_value}}" onclick="return confirm('确认{{st_msg}}该{{ _('users') }}？');">{{st_msg}}</a> |
-                                    <a href="/public/api?module=users&fun=del&id={{u['id']}}" onclick="return confirm('确认{{ _('Delete') }}该{{ _('users') }}？');">{{ _('Delete') }}</a>
+                                    <a href="/public/api?module=users&fun=ch_status&id={{u['id']}}&value={{fun_value}}" onclick="return confirm('{{ _('Confirm') }}{{st_msg}}{{ _('this user?') }}');">{{st_msg}}</a> |
+                                    <a href="/public/api?module=users&fun=del&id={{u['id']}}" onclick="return confirm('{{ _('Really delete this user?') }}');">{{ _('Delete') }}</a>
                                 </td>
 							</tr>
-                            {# 可{{ _('Edit') }}状态 #}
+                            {# {{ _('Editable') }} #}
                             <tr id="edit_line_{{u['id']}}" class="display_no">
                                 <td>{{ loop.index }}</td>
                                 <td>{{u['username']}}</td>
@@ -89,8 +89,8 @@
                                 <td>{{u['mdate']}}</td>
                                 <td><input type="text" class="input-mini" value="{{u['comment'] or ''}}" name="comment_{{u['id']}}" id="comment_{{u['id']}}"></td>
                                 <td>
-                                    <a href="javascript:void(0);" onclick="save_info({{u['id']}});">保存</a> |
-                                    <a href="javascript:void(0);" onclick="to_line({{u['id']}})">取消</a>
+                                    <a href="javascript:void(0);" onclick="save_info({{u['id']}});">{{ _('Save') }}</a> |
+                                    <a href="javascript:void(0);" onclick="to_line({{u['id']}})">{{ _('Cancel') }}</a>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -117,26 +117,26 @@
 								</div>
 							</div>
                             <div class="control-group">
-								<label class="control-label" for="oldpass">原始{{ _('Password') }}</label>
+								<label class="control-label" for="oldpass">{{ _('Current Password') }}</label>
 								<div class="controls">
 									<input type="text" class="input-xlarge" id="oldpass" name="oldpass" readonly/>
 								</div>
 							</div>
                             <div class="control-group">
-								<label class="control-label" for="newpass">新{{ _('Password') }}</label>
+								<label class="control-label" for="newpass">{{ _('New Password') }}</label>
 								<div class="controls">
 									<input type="password" class="input-xlarge" id="newpass" name="newpass"/>
 								</div>
 							</div>
                             <div class="control-group">
-								<label class="control-label" for="newpass2">确认新{{ _('Password') }}</label>
+								<label class="control-label" for="newpass2">{{ _('Confirm New Password') }}</label>
 								<div class="controls">
 									<input type="password" class="input-xlarge" id="newpass2" name="newpass2"/>
 								</div>
 							</div>
 							<div class="form-actions">
-								<a href="javascript:void(0)" class="btn" onclick="cancel_pass();">取 消</a>　　
-                                <a href="javascript:void(0);" class="btn btn-primary" onclick="save_pass()">保 存</a>
+								<a href="javascript:void(0)" class="btn" onclick="cancel_pass();">{{ _('Cancel') }}</a>  
+                                <a href="javascript:void(0);" class="btn btn-primary" onclick="save_pass()">{{ _('Save') }}</a>
 							</div>
 						</fieldset>
 					</form>

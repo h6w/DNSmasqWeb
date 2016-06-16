@@ -1,0 +1,47 @@
+#!/bin/bash
+
+langs_avail=`ls -1 translations`
+ 
+## Update the babel translation
+usage () {
+    echo "Update the internationalisation."
+    echo "Usage: $0 (update|edit|commit) ([lang]|all)*"
+    echo "   update - gets new var from source and updates messages.pot"
+    echo "   edit - edits each translations/..../*.po with ${EDITOR}"
+    echo "   commit - reads messages.pot and outputs translations/..../*.po"
+    echo "[lang] - specify the language to manipulate, one of:"
+    echo "    ${langs_avail[@]}"
+    echo "Specifying no language defaults to \"all\"."
+    exit 1
+}
+
+if [ $# -gt 2 ] || [ $# -lt 1 ]; then
+    usage
+elif [ $# -eq 1 ] || [ $2 == 'all' ]; then
+    declare -a langs
+    langs=$langs_avail
+else
+    declare -a langs
+    langs=( $2 )
+fi
+
+ACTION="$1"
+case $ACTION in
+	update)
+    		pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
+    		pybabel update -i messages.pot -d translations
+       		;;    
+	edit)
+		editor="${VISUAL:-vi}"
+		for lang in ${langs[@]}; do
+                    ${editor} "translations/${lang}/LC_MESSAGES/messages.po"
+                done
+       		;;    
+	commit)
+   		pybabel compile -d translations
+       		;;   
+        *)
+		echo "Unknown action $ACTION"
+		exit 1
+		;; 
+esac

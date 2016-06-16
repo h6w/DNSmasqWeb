@@ -12,10 +12,10 @@
         <section class="loginBox span7">
             <h2>DnsMasq Web</h2>
             <p><span>{{ _('Username') }}</span><input type="text" name="username" placeholder="Username"/></p>
-            <p><span>密　码</span><input type="password" name="password" placeholder="Password"/></p>
+            <p><span>{{ _('Password') }}</span><input type="password" name="password" placeholder="Password"/></p>
             <section class="row-fluid">
-                <section class="span8"><label><input type="checkbox" name="remember" value="yes"/> 记住登录</label></section>
-                <section class="span1"><input type="submit" value="登　录" class="btn btn-primary"></section>
+                <section class="span8"><label><input type="checkbox" name="remember" value="yes"/> {{ _('Remember login') }}</label></section>
+                <section class="span1"><input type="submit" value="{{ _('Log in') }}" class="btn btn-primary"></section>
             </section>
         </section>
         </form>

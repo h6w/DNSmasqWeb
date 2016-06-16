@@ -20,8 +20,8 @@
 				<div class="span10">
 					<h4>DHCP{{ _('Address Pool Management') }} | <a href="/dhcp/host">{{ _('Binding Rules') }}</a></h4>
                     <div class="pull-right">
-                        <input type="button" class="btn btn-primary" value="保 存" onclick="save_dhcp_config();">
-                        <input type="button" class="btn btn-warning" value="刷新服务" onclick="reload_dhcp('normal')">
+                        <input type="button" class="btn btn-primary" value="{{ _('Save') }}" onclick="save_dhcp_config();">
+                        <input type="button" class="btn btn-warning" value="(( _('Reload') }}" onclick="reload_dhcp('normal')">
                     </div><br />
 
                     <form class="form-horizontal" id="add_line" method="post">
@@ -99,19 +99,19 @@
 								</div>
 							</div>
                             <div class="control-group">
-								<label class="control-label" for="dns1">主{{ _('Domain Name') }}服务器</label>
+								<label class="control-label" for="dns1">{{ _('Primary Domain Name Server') }}</label>
 								<div class="controls">
 									<input type="text" class="input-xlarge" id="dns1" name="dns1" value="{{dhcp['xk_dhcp_pool_dns1']}}" />
 								</div>
 							</div>
                             <div class="control-group">
-								<label class="control-label" for="dns2">辅助{{ _('Domain Name') }}服务器</label>
+								<label class="control-label" for="dns2">{{ _('Secondary Domain Name Server') }}</label>
                                 <div class="controls">
 									<input type="text" class="input-xlarge" id="dns2" name="dns2" value="{{dhcp['xk_dhcp_pool_dns2']}}" />
 								</div>
 							</div>
                             <div class="control-group">
-								<label class="control-label" for="comment">{{ _('Remark') }}信息</label>
+								<label class="control-label" for="comment">{{ _('Comment') }}</label>
 								<div class="controls">
 									<input type="text" class="input-xlarge" id="comment" name="comment" value="{{dhcp['xk_dhcp_pool_comment']}}" />
 								</div>
@@ -145,22 +145,22 @@
                 comment = $("#comment").val();
                 router = $("#router").val();
                 if ( range_start == '') {
-                    alert("请输入起始地址！");
+                    alert("{{ _('Please enter starting address!') }}");
                     $("#range_start").focus();
                     return false;
                 };
                 if ( range_end == '') {
-                    alert("请输入结束地址！");
+                    alert("{{ _('Please enter end address!') }}");
                     $("#ragne_end").focus();
                     return false;
                 };
                 if ( router == '') {
-                    alert("请输入{{ _('Gateway Address') }}！");
+                    alert("{{ _('Please enter gateway address!') }}");
                     $("#router").focus();
                     return false;
                 };
                 if ( dns1 == '') {
-                    alert("请输入DNS地址！");
+                    alert("{{ _('Please enter DNS address!') }}");
                     $("#dns1").focus();
                     return false;
                 };
@@ -171,20 +171,20 @@
                     dataType: "text",
                     success: function(msg){
                         if (msg == "1") {
-                            alert("保存成功！");
+                            alert("{{ _('Saved successfully') }}!");
                             //window.location.href="/dhcp/pool";
-                            if ( confirm("是否刷新DHCP配置？") ) {
+                            if ( confirm("{{ _('Refresh the DHCP configuration') }}?") ) {
                                 reload_dhcp("normal");
                                 return true;
                             };
                             return false;
                         } else {
-                            alert("提示：保存失败！");
+                            alert("{{ _('Alert') }}:{{ _('Save failed!') }}");
                             return false;
                         }
                         },
                     error:function(){
-                        alert("{{ _('Note: Internal Server Error') }}！");
+                        alert("{{ _('Note: Internal Server Error') }}!");
                         return false;
                         },
                     });
