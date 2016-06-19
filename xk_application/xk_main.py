@@ -128,6 +128,7 @@ class BaseHandler(RequestHandler, TemplateRendering):
             'request': self.request,
             'xsrf_token': self.xsrf_token,
             'xsrf_form_html': self.xsrf_form_html,
+            '_': self.locale.translate,
         })
         content = self.render_template(template_name, **kwargs)
         self.write(content)
