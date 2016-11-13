@@ -6,6 +6,7 @@ langs_avail=`ls -1 translations`
 usage () {
     echo "Update the internationalisation."
     echo "Usage: $0 (update|edit|commit) ([lang]|all)*"
+    echo "   todo - find non-ascii characters outside translation files"
     echo "   update - gets new var from source and updates messages.pot"
     echo "   edit - edits each translations/..../*.po with ${EDITOR}"
     echo "   commit - reads messages.pot and outputs translations/..../*.po"
@@ -27,6 +28,9 @@ fi
 
 ACTION="$1"
 case $ACTION in
+        todo)
+		grep -I -r --exclude=README.md --exclude-dir=translations --exclude-dir=.git --color='auto' -P -n '[^\x00-\x7F]' ./ 
+		;;
 	update)
     		pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .
     		pybabel update -i messages.pot -d translations
