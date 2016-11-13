@@ -26,7 +26,7 @@ class TemplateRendering:
                 self.settings["template_path"]
             )
 
-        env = Environment(loader=FileSystemLoader(template_dirs),trim_blocks=True) # trim_blocks去除生成html产生的大量空行
+        env = Environment(loader=FileSystemLoader(template_dirs),trim_blocks=True)
 
         try:
             template = env.get_template(template_name)
@@ -36,7 +36,6 @@ class TemplateRendering:
         return content
 
 class BaseHandler(RequestHandler, TemplateRendering):
-    # 自定义Header信息
     def set_default_headers(self):
         self.set_header("Server","XK-WebServer/2014")
         self.set_header("X-Powered-By","LuXiaok")
@@ -60,20 +59,16 @@ class BaseHandler(RequestHandler, TemplateRendering):
         else:
             return None
 
-    # 或者文件的MD5值
     def get_md5(self,file):
         m = md5()
-        # 需要使用二进制格式读取文件内容
         f = open(file, 'rb')
         m.update(f.read())
         f.close()
         return m.hexdigest()
 
-    # 格式化时间
     def get_time(self,s=None):
         return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(s))
 
-    # 格式化文件大小
     def format_size(self,i):
         i = int(i)
         unit = 'Bytes'
@@ -90,7 +85,6 @@ class BaseHandler(RequestHandler, TemplateRendering):
             return '%d %s' % (i,unit)
         return '%.2f %s' % (i,unit)
 
-    # 格式化秒
     def format_seconds(self,s):
         s = int(s)
         D = 0
@@ -132,22 +126,17 @@ class BaseHandler(RequestHandler, TemplateRendering):
         content = self.render_template(template_name, **kwargs)
         self.write(content)
 
-# 模块权限管理装饰器
 def Perm(method):
     @functools.wraps(method)
     def wrapper(self, *args, **kwargs):
-        #### 权限控制 ####
-        class_name = self.__class__.__name__  #获取类名，其实获取到了待用该方法的类名，方便更加精确的权限判断
-        request_method = self.request.method  #获取请求方法名：GET|POST
-        #print "Class Name: %s" % class_name
-        #print "Method: %s" % request_method
+        class_name = self.__class__.__name__
+        request_method = self.request.method
         permission = self.db.get("select is_admin from login_users where username = %s and status = 'yes'",self.current_user)
         if permission:
             is_admin = permission['is_admin']
             if is_admin == "no":
-                self.write(''' <script type="text/javascript" >alert("Sorry，您没有权限操作！");</script> Sorry，您没有权限操作！''')
+                self.write(''' <script type="text/javascript" >alert("'''._("Sorry, you do not have permission to perform that operation!").'''");</script> '''._("Sorry, you do not have permission to perform that operation!"))
                 return
-        ###########
         return method(self, *args, **kwargs)
     return wrapper
 

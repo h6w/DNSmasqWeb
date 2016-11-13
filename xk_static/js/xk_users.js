@@ -1,7 +1,7 @@
 /*
  *
  *  For User Page
- *  Desgin By Xiaok
+ *  Design By Xiaok
  *  2014-12-10 23:22:54
  *
 */
@@ -15,27 +15,27 @@ function add_user() {
     password2 = $("#password2").val();
     comment = $("#comment").val();
     if (username == '') {
-        alert("请输入用户名！");
+        alert("{{ _('Please enter a user name') }}");
         $("#username").focus();
         return false;
     };
     if (name == '') {
-        alert("请输入姓名！");
+        alert("{{ _('Please type in your name') }}");
         $("#name").focus();
         return false;
     };
     if (password == '') {
-        alert("请输入密码！");
+        alert("{{ _('Please enter a password') }}");
         $("#password").focus();
         return false;
     };
     if (password2 == '') {
-        alert("请再次输入密码！");
+        alert("{{ _('Please enter the password again') }}");
         $("#password2").focus();
         return false;
     };
     if (password != password2) {
-        alert("密码不一致！");
+        alert("{{ _('The passwords do not match, please try again') }}");
         $("#password").val("");
         $("#password2").val("");
         $("#password").focus();
@@ -56,17 +56,17 @@ function add_user() {
         dataType: "text",
         success: function(msg) {
             if (msg == "1") {
-                alert("添加成功！");
+                alert("{{ _('Added successfully') }}");
                 window.location.href = "/users";
             } else if (msg == "2") {
-                alert("用户已存在！");
+                alert("{{ _('User already exists') }}");
                 $("#username").focus();
             } else {
-                alert("提示：添加用户失败！");
+                alert("{{ _('Error: Failed to add user') }}");
             }
         },
         error: function() {
-            alert("提示：服务器内部错误！");
+            alert("{{ _('Error: Internal Server Error') }}");
         },
     });
 };
@@ -89,7 +89,7 @@ function to_line(id) {
     $(show_id).removeClass("display_no");
     $(edit_id).addClass("display_no");
 };
-/* 编辑保存记录 */
+
 function save_info(id) {
     //username = $("#username_"+id).val();
     name = $("#name_" + id).val();
@@ -110,15 +110,15 @@ function save_info(id) {
         dataType: "text",
         success: function(msg) {
             if (msg == "1") {
-                alert("修改成功！");
+                alert("{{ _('Successfully modified') }}");
                 location.href = "/users";
             } else {
-                alert("提示：修改失败！");
+                alert("{{ _('Error: Modification failed') }}");
                 return false;
             }
         },
         error: function() {
-            alert("提示：服务器内部错误！");
+            alert("{{ _('Error: Internal Server Error') }}");
             return false;
         },
     });
@@ -140,12 +140,12 @@ function save_pass() {
     pass1 = $("#newpass").val();
     pass2 = $("#newpass2").val();
     if (pass1 == '' || pass2 == '') {
-        alert("密码不能为空！");
+        alert("{{ _('Error: Password should not be blank') }}");
         $("#newpass").focus();
         return false;
     }
     if (pass1 != pass2) {
-        alert("两次输入密码不一致！！");
+        alert("{{ _('Please enter the password twice') }}");
         $("#newpass").val("");
         $("#newpass2").val("");
         $("#newpass").focus();
@@ -162,15 +162,15 @@ function save_pass() {
         dataType: "text",
         success: function(msg) {
             if (msg == "1") {
-                alert("修改密码成功！");
+                alert("{{ _('The password has been updated successfully') }}");
                 location.href = "/users";
             } else {
-                alert("提示：修改密码失败！");
+                alert("{{ _('Error: Failed to update password') }}");
                 return false;
             }
         },
         error: function() {
-            alert("提示：服务器内部错误！");
+            alert("{{ _('Error: Internal Server Error') }}");
             return false;
         },
     });
