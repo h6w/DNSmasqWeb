@@ -1,0 +1,586 @@
+# English translations for DNSmasqWeb.
+# Copyright (C) 2016 Contributors
+# This file is distributed under the same license as the DNSmasqWeb project.
+# Tudor Holton <tudor@tudorholton.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: tudor@tudorholton.com\n"
+"POT-Creation-Date: 2016-11-13 15:10+1100\n"
+"PO-Revision-Date: 2016-05-13 13:34+1000\n"
+"Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: xk_application/xk_main.py:138
+msgid "Sorry, you do not have permission to perform that operation!"
+msgstr "Sorry, you do not have permission to perform that operation!"
+
+#: xk_handler/xk_login.py:19
+msgid "Users disabled, please contact the administrator!"
+msgstr "User disabled, please contact the administrator!"
+
+#: xk_handler/xk_login.py:22
+msgid "Wrong username or password!"
+msgstr "Wrong username or password!"
+
+#: xk_html/xk_dhcp_pool.html:8 xk_html/xk_nav.html:17
+#: xk_html/xk_top_nav.html:22
+msgid "DHCP Management"
+msgstr "DHCP Management"
+
+#: xk_html/xk_dhcp_pool.html:21
+msgid "Address Pool Management"
+msgstr "Address Pool Management"
+
+#: xk_html/xk_dhcp_pool.html:21 xk_html/xk_top_nav.html:25
+msgid "Binding Rules"
+msgstr "Binding Rules"
+
+#: xk_html/xk_dhcp_pool.html:23 xk_html/xk_domain.html:48
+#: xk_html/xk_domain.html:83 xk_html/xk_record.html:74
+#: xk_html/xk_record.html:124 xk_html/xk_users.html:52 xk_html/xk_users.html:92
+#: xk_html/xk_users.html:139
+msgid "Save"
+msgstr "Save"
+
+#: xk_html/xk_dhcp_pool.html:30
+msgid "DHCP Enable"
+msgstr "DHCP Enable"
+
+#: xk_html/xk_dhcp_pool.html:41 xk_html/xk_top_nav.html:24
+msgid "Address Pool"
+msgstr "Address Pool"
+
+#: xk_html/xk_dhcp_pool.html:48
+msgid "Subnet Mask"
+msgstr "Subnet Mask"
+
+#: xk_html/xk_dhcp_pool.html:72
+msgid "Gateway Address"
+msgstr "Gateway Address"
+
+#: xk_html/xk_dhcp_pool.html:78 xk_html/xk_domain.html:31
+msgid "Domain Name"
+msgstr "Domain Name"
+
+#: xk_html/xk_dhcp_pool.html:84
+msgid "Lease"
+msgstr "Lease"
+
+#: xk_html/xk_dhcp_pool.html:87 xk_html/xk_dhcp_pool.html:88
+#: xk_html/xk_dhcp_pool.html:89 xk_html/xk_dhcp_pool.html:90
+#: xk_html/xk_dhcp_pool.html:91
+msgid "hours"
+msgstr "hours"
+
+#: xk_html/xk_dhcp_pool.html:92 xk_html/xk_dhcp_pool.html:93
+#: xk_html/xk_dhcp_pool.html:94 xk_html/xk_dhcp_pool.html:95
+#: xk_html/xk_dhcp_pool.html:96 xk_html/xk_dhcp_pool.html:97
+msgid "days"
+msgstr "days"
+
+#: xk_html/xk_dhcp_pool.html:102
+msgid "Primary Domain Name Server"
+msgstr "Primary Domain Name Server"
+
+#: xk_html/xk_dhcp_pool.html:108
+msgid "Secondary Domain Name Server"
+msgstr "Secondary Domain Name Server"
+
+#: xk_html/xk_dhcp_pool.html:114
+msgid "Comment"
+msgstr "Comment"
+
+#: xk_html/xk_dhcp_pool.html:148
+msgid "Please enter starting address!"
+msgstr "Please enter starting address!"
+
+#: xk_html/xk_dhcp_pool.html:153
+msgid "Please enter end address!"
+msgstr "Please enter end address!"
+
+#: xk_html/xk_dhcp_pool.html:158
+msgid "Please enter gateway address!"
+msgstr "Please enter gateway address!"
+
+#: xk_html/xk_dhcp_pool.html:163
+msgid "Please enter DNS address!"
+msgstr "Please enter DNS address!"
+
+#: xk_html/xk_dhcp_pool.html:174
+msgid "Saved successfully"
+msgstr "Saved successfully"
+
+#: xk_html/xk_dhcp_pool.html:176
+msgid "Refresh the DHCP configuration"
+msgstr "Refresh the DHCP configuration"
+
+#: xk_html/xk_dhcp_pool.html:182 xk_html/xk_domain.html:129
+#: xk_html/xk_domain.html:180 xk_html/xk_record.html:175
+#: xk_html/xk_record.html:215 xk_html/xk_record.html:254
+msgid "Alert"
+msgstr "Alert"
+
+#: xk_html/xk_dhcp_pool.html:182
+msgid "Save failed!"
+msgstr "Save failed!"
+
+#: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:133
+#: xk_html/xk_domain.html:185 xk_html/xk_record.html:179
+#: xk_html/xk_record.html:219 xk_html/xk_record.html:259
+#: xk_html/xk_users_logs.html:85
+msgid "Note: Internal Server Error"
+msgstr "Note: Internal Server Error"
+
+#: xk_html/xk_domain.html:8 xk_html/xk_domain.html:21 xk_html/xk_nav.html:11
+#: xk_html/xk_top_nav.html:17
+msgid "Domain Management"
+msgstr "Domain Management"
+
+#: xk_html/xk_domain.html:24 xk_html/xk_record.html:35
+msgid "Synchronize"
+msgstr "Synchronize"
+
+#: xk_html/xk_domain.html:25
+msgid "Add Domain Name"
+msgstr "Add Domain Name"
+
+#: xk_html/xk_domain.html:32
+msgid "Domain Name Record"
+msgstr "Domain Name Record"
+
+#: xk_html/xk_domain.html:33 xk_html/xk_record.html:47 xk_html/xk_users.html:35
+msgid "Created"
+msgstr "Created"
+
+#: xk_html/xk_domain.html:34 xk_html/xk_record.html:48 xk_html/xk_users.html:36
+msgid "Updated"
+msgstr "Updated"
+
+#: xk_html/xk_domain.html:35 xk_html/xk_record.html:49 xk_html/xk_users.html:37
+msgid "Remark"
+msgstr "Remark"
+
+#: xk_html/xk_domain.html:36 xk_html/xk_record.html:50 xk_html/xk_users.html:38
+msgid "Operation"
+msgstr "Operation"
+
+#: xk_html/xk_domain.html:49 xk_html/xk_domain.html:84
+#: xk_html/xk_record.html:75 xk_html/xk_record.html:125
+#: xk_html/xk_users.html:53 xk_html/xk_users.html:93 xk_html/xk_users.html:138
+msgid "Cancel"
+msgstr "Cancel"
+
+#: xk_html/xk_domain.html:63
+msgid "View"
+msgstr "View"
+
+#: xk_html/xk_domain.html:63
+msgid "of"
+msgstr "of"
+
+#: xk_html/xk_domain.html:63
+msgid "records"
+msgstr "records"
+
+#: xk_html/xk_domain.html:69 xk_html/xk_record.html:97 xk_html/xk_users.html:75
+msgid "Edit"
+msgstr "Edit"
+
+#: xk_html/xk_domain.html:70 xk_html/xk_record.html:98 xk_html/xk_users.html:77
+msgid "Confirm"
+msgstr "Confirm"
+
+#: xk_html/xk_domain.html:70
+msgid "this domain name?"
+msgstr "this domain name?"
+
+#: xk_html/xk_domain.html:71
+msgid "Delete this domain name and all related records"
+msgstr "Delete this domain name and all related records"
+
+#: xk_html/xk_domain.html:71 xk_html/xk_record.html:99 xk_html/xk_users.html:78
+msgid "Delete"
+msgstr "Delete"
+
+#: xk_html/xk_domain.html:92 xk_html/xk_record.html:133
+#: xk_html/xk_users.html:101 xk_html/xk_users_logs.html:56
+msgid "More"
+msgstr "More"
+
+#: xk_html/xk_domain.html:107
+msgid "Please enter Domain Name!"
+msgstr "Please enter a domain name!\""
+
+#: xk_html/xk_domain.html:112
+msgid "Please enter Domain Name Record!"
+msgstr "Please enter a domain name record!\""
+
+#: xk_html/xk_domain.html:123 xk_html/xk_record.html:169
+#: xk_static/js/xk_users.js:59
+msgid "Added successfully"
+msgstr "Added successfully"
+
+#: xk_html/xk_domain.html:126
+msgid "Domain name already exists!"
+msgstr "Domain name already exists!\""
+
+#: xk_html/xk_domain.html:129
+msgid "Add domain name failed!"
+msgstr "Add domain name failed!"
+
+#: xk_html/xk_domain.html:144
+msgid "Enter the domain profile"
+msgstr "Enter the domain profile\""
+
+#: xk_html/xk_domain.html:165 xk_html/xk_record.html:236
+msgid "Edit saved records"
+msgstr "Edit saved records"
+
+#: xk_html/xk_domain.html:177 xk_html/xk_record.html:251
+#: xk_static/js/xk_users.js:113
+msgid "Successfully modified"
+msgstr "Successfully modified"
+
+#: xk_html/xk_domain.html:180 xk_html/xk_record.html:254
+msgid "Failed to edit"
+msgstr "Failed to edit"
+
+#: xk_html/xk_login.html:14 xk_html/xk_users.html:31 xk_html/xk_users.html:114
+#: xk_html/xk_users_logs.html:31
+msgid "Username"
+msgstr "Username"
+
+#: xk_html/xk_login.html:15 xk_html/xk_users.html:48 xk_html/xk_users.html:76
+msgid "Password"
+msgstr "Password"
+
+#: xk_html/xk_login.html:17
+msgid "Remember login"
+msgstr "Remember login"
+
+#: xk_html/xk_login.html:18
+msgid "Log in"
+msgstr "Log in"
+
+#: xk_html/xk_nav.html:8 xk_html/xk_top_nav.html:12
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: xk_html/xk_nav.html:14 xk_html/xk_top_nav.html:15
+msgid "DNS Management"
+msgstr "DNS Management"
+
+#: xk_html/xk_nav.html:20 xk_html/xk_top_nav.html:41
+msgid "Message Center"
+msgstr "Message Center"
+
+#: xk_html/xk_nav.html:23
+msgid "System Settings"
+msgstr "System Settings"
+
+#: xk_html/xk_nav.html:26
+msgid "users"
+msgstr "users"
+
+#: xk_html/xk_nav.html:29 xk_html/xk_top_nav.html:13 xk_html/xk_users.html:8
+#: xk_html/xk_users.html:21
+msgid "User Management"
+msgstr "User Management"
+
+#: xk_html/xk_nav.html:32 xk_html/xk_users.html:25
+msgid "Add User"
+msgstr "Add User"
+
+#: xk_html/xk_nav.html:35
+msgid "Log Management"
+msgstr "Log Management"
+
+#: xk_html/xk_nav.html:40
+msgid "Help"
+msgstr "Help"
+
+#: xk_html/xk_nav.html:43
+msgid "About"
+msgstr "About"
+
+#: xk_html/xk_nav.html:46
+msgid "About the project"
+msgstr "About the project"
+
+#: xk_html/xk_nav.html:49
+msgid "About the Author"
+msgstr "About the Author"
+
+#: xk_html/xk_record.html:8 xk_html/xk_record.html:24
+msgid "Records management"
+msgstr "Records Management"
+
+#: xk_html/xk_record.html:28
+msgid "Please choose a Domain Name"
+msgstr "Please choose a Domain Name"
+
+#: xk_html/xk_record.html:34
+msgid "Batch Delete"
+msgstr "Batch Delete"
+
+#: xk_html/xk_record.html:36
+msgid "Add record"
+msgstr "Add record"
+
+#: xk_html/xk_record.html:43
+msgid "Host Record"
+msgstr "Host Record"
+
+#: xk_html/xk_record.html:44
+msgid "Record Type"
+msgstr "Record Type"
+
+#: xk_html/xk_record.html:45
+msgid "Record Values"
+msgstr "Record Values"
+
+#: xk_html/xk_record.html:46
+msgid "MX Priority"
+msgstr "MX Priority"
+
+#: xk_html/xk_record.html:98
+msgid "this record?"
+msgstr "this record?"
+
+#: xk_html/xk_record.html:99
+msgid "Really delete this record?"
+msgstr "Really delete this record?"
+
+#: xk_html/xk_record.html:148
+msgid "Please enter records!"
+msgstr "Please enter records!"
+
+#: xk_html/xk_record.html:153
+msgid "Please enter Record Values!"
+msgstr "Please enter Record Values!"
+
+#: xk_html/xk_record.html:158
+msgid "Please enter MX priority!"
+msgstr "Please enter MX priority!"
+
+#: xk_html/xk_record.html:172
+msgid "Record already exists!"
+msgstr "Record already exists!"
+
+#: xk_html/xk_record.html:175
+msgid "Failed to add record"
+msgstr "Failed to add record"
+
+#: xk_html/xk_record.html:203
+msgid "Synchronization successful"
+msgstr "Synchronization successful"
+
+#: xk_html/xk_record.html:206
+msgid "DNSmasq failed to restart"
+msgstr "DNSmasq failed to restart"
+
+#: xk_html/xk_record.html:209
+msgid "Domain name MD5 checksum failure, proceed anyway"
+msgstr "Domain name MD5 checksum failure, procees anyway"
+
+#: xk_html/xk_record.html:215
+msgid "Synchronization failed to parse"
+msgstr "Synchronization failed to parse"
+
+#: xk_html/xk_top_nav.html:18
+msgid "Records Management"
+msgstr "Records Management"
+
+#: xk_html/xk_top_nav.html:26
+msgid "DHCP Allocation"
+msgstr "DHCP Allocation"
+
+#: xk_html/xk_top_nav.html:35
+msgid "Welcome"
+msgstr "Welcome!"
+
+#: xk_html/xk_top_nav.html:40
+msgid "Personal Information"
+msgstr "Personal Information"
+
+#: xk_html/xk_top_nav.html:42
+msgid "Setup"
+msgstr "Setup"
+
+#: xk_html/xk_top_nav.html:43
+msgid "Logout"
+msgstr "Logout"
+
+#: xk_html/xk_users.html:32 xk_html/xk_users_logs.html:32
+msgid "Full name"
+msgstr "Full name"
+
+#: xk_html/xk_users.html:33
+msgid "Email Address"
+msgstr "Email Address"
+
+#: xk_html/xk_users.html:34
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: xk_html/xk_users.html:49
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+#: xk_html/xk_users.html:77
+msgid "this user?"
+msgstr "this user?"
+
+#: xk_html/xk_users.html:78
+msgid "Really delete this user?"
+msgstr "Really delete this user?"
+
+#: xk_html/xk_users.html:108 xk_html/xk_users_logs.html:30
+msgid "UID"
+msgstr "UID"
+
+#: xk_html/xk_users.html:120
+msgid "Current Password"
+msgstr "Current Password"
+
+#: xk_html/xk_users.html:126
+msgid "New Password"
+msgstr "New Password"
+
+#: xk_html/xk_users.html:132
+msgid "Confirm New Password"
+msgstr "Confirm New Password"
+
+#: xk_html/xk_users_logs.html:8
+msgid "User Log Management"
+msgstr "User Log Management"
+
+#: xk_html/xk_users_logs.html:21
+msgid "User Login Log"
+msgstr "User Login Log"
+
+#: xk_html/xk_users_logs.html:24
+msgid "Clear Log"
+msgstr "Clear Log"
+
+#: xk_html/xk_users_logs.html:33
+msgid "Log in time"
+msgstr "Log in time"
+
+#: xk_html/xk_users_logs.html:34
+msgid "Log Host"
+msgstr "Log Host"
+
+#: xk_html/xk_users_logs.html:35
+msgid "Login Area"
+msgstr "Login Area"
+
+#: xk_html/xk_users_logs.html:36
+msgid "User Agent"
+msgstr "User Agent"
+
+#: xk_html/xk_users_logs.html:67
+msgid "Confirm you want to clear all login log"
+msgstr "Confirm you want to clear all login log"
+
+#: xk_html/xk_users_logs.html:77
+msgid "Clear log success"
+msgstr "Clear log success"
+
+#: xk_html/xk_users_logs.html:80
+msgid "Note: Clear log failure"
+msgstr "Note: Clear log failure"
+
+#: xk_static/js/xk_dhcp.js:10
+msgid "DHCP configuration loaded successfully"
+msgstr "DHCP configuration loaded successfully"
+
+#: xk_static/js/xk_dhcp.js:13
+msgid "Configuration MD5 validation failed, override?"
+msgstr "Configuration MD5 validation failed, override?"
+
+#: xk_static/js/xk_dhcp.js:19
+msgid "Error: Restarting the DNSmasq service failed"
+msgstr "Error: Restarting the DNSmasq service failed"
+
+#: xk_static/js/xk_dhcp.js:22
+msgid "Failed to write DHCP configuration"
+msgstr "Failed to write DHCP configuration"
+
+#: xk_static/js/xk_dhcp.js:25
+msgid "Error: Operation failed for unknown reason"
+msgstr "Error: Operation failed for unknown reason"
+
+#: xk_static/js/xk_dhcp.js:30 xk_static/js/xk_users.js:69
+#: xk_static/js/xk_users.js:121 xk_static/js/xk_users.js:173
+msgid "Error: Internal Server Error"
+msgstr "Error: Internal Server Error"
+
+#: xk_static/js/xk_users.js:18
+msgid "Please enter a user name"
+msgstr "Please enter a user name"
+
+#: xk_static/js/xk_users.js:23
+msgid "Please type in your name"
+msgstr "Please type in your name"
+
+#: xk_static/js/xk_users.js:28
+msgid "Please enter a password"
+msgstr "Please enter a password"
+
+#: xk_static/js/xk_users.js:33
+msgid "Please enter the password again"
+msgstr "Please enter the password again"
+
+#: xk_static/js/xk_users.js:38
+msgid "The passwords do not match, please try again"
+msgstr "The passwords do not match, please try again"
+
+#: xk_static/js/xk_users.js:62
+msgid "User already exists"
+msgstr "User already exists"
+
+#: xk_static/js/xk_users.js:65
+msgid "Error: Failed to add user"
+msgstr "Error: Failed to add user"
+
+#: xk_static/js/xk_users.js:116
+msgid "Error: Modification failed"
+msgstr "Error: Modification failed"
+
+#: xk_static/js/xk_users.js:143
+msgid "Error: Password should not be blank"
+msgstr "Error: Password should not be blank"
+
+#: xk_static/js/xk_users.js:148
+msgid "Please enter the password twice"
+msgstr "Please enter the password twice"
+
+#: xk_static/js/xk_users.js:165
+msgid "The password has been updated successfully"
+msgstr "The password has been updated successfully"
+
+#: xk_static/js/xk_users.js:168
+msgid "Error: Failed to update password"
+msgstr "Error: Failed to update password"
+
+#~ msgid "CPU Name"
+#~ msgstr "CPU Name"
+
+#~ msgid "MAC Address"
+#~ msgstr "MAC Address"
+
+#~ msgid "IP Address"
+#~ msgstr "IP Address"
+
+#~ msgid "Action"
+#~ msgstr "Action"
+

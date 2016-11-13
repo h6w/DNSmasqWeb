@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="DnsMasqWeb - Desgin By Xiaok">
 		<meta name="author" content="Xiaok">
-		<title>用户登录日志管理 - DnsMasqWeb - Desgin By Xiaok</title>
+		<title>{{ _('User Log Management') }} - DnsMasqWeb - Desgin By Xiaok</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="/xk_static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/xk_static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -18,22 +18,22 @@
 				{% include "xk_nav.html" %}
 				<div class="span10">
 					<h4>
-						用户登录日志
+						{{ _('User Login Log') }}
 					</h4>
                     <div class="pull-right">
-                        <input type="button" class="btn btn-warning" value="清除日志" onclick="clear_logs();">
+                        <input type="button" class="btn btn-warning" value="{{ _('Clear Log') }}" onclick="clear_logs();">
                     </div><br /><br />
 					<table class="table table-bordered table-striped table-hover table-condensed">
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>UID</th>
-                                <th>用户名</th>
-                                <th>姓名</th>
-                                <th>登录时间</th>
-                                <th>登录主机</th>
-                                <th>登录地区</th>
-								<th>用户代理</th>
+								<th>{{ _('UID') }}</th>
+                                <th>{{ _('Username') }}</th>
+                                <th>{{ _('Full name') }}</th>
+                                <th>{{ _('Log in time') }}</th>
+                                <th>{{ _('Log Host') }}</th>
+                                <th>{{ _('Login Area') }}</th>
+								<th>{{ _('User Agent') }}</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -53,7 +53,7 @@
 					</table>
 					<ul class="pager">
 						<li class="next">
-							<a href="javascript:void(0)">More &rarr;</a>
+							<a href="javascript:void(0)">{{ _('More') }} &rarr;</a>
 						</li>
 					</ul>
 				</div>
@@ -64,7 +64,7 @@
 		<script src="/xk_static/js/xk_dnsmasqweb.js"></script>
         <script type="text/javascript">
             function clear_logs() {
-                if ( ! confirm("确认要清除所有登录日志吗？") ) {
+                if ( ! confirm("{{ _('Confirm you want to clear all login log') }}?") ) {
                     return false;
                 };
                 $.ajax({
@@ -74,15 +74,15 @@
                     dataType: "text",
                     success: function(msg){
                         if (msg == "1") {
-                            alert("清除日志成功！");
+                            alert("{{ _('Clear log success') }}!");
                             location.href="/users/logs";
                         } else {
-                            alert("提示：清除日志失败！");
+                            alert("{{ _('Note: Clear log failure') }}!");
                             return false;
                         }
                         },
                     error:function(){
-                        alert("提示：服务器内部错误！");
+                        alert("{{ _('Note: Internal Server Error') }}!");
                         return false;
                         },
                     });

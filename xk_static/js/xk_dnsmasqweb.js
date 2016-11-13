@@ -30,7 +30,6 @@
 
 })(this.jQuery);
 
-// 选中所有
 $("#checkbox_all").click(
     function(){
         $(this).parent().parent().parent().parent().find("input[type='checkbox']").attr('checked', $(this).is(':checked'));

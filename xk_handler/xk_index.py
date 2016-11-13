@@ -5,11 +5,12 @@ from xk_application.xk_main import *
 import platform,os,sys,math
 
 class IndexHandler(BaseHandler):
+    DEFAULT_UNIT = 1024
+
     def get_hostname(self):
         h = os.popen("hostname")
         return h.read().strip()
 
-    # 获取服务器运行时间
     def get_uptime(self):
         f = open('/proc/uptime','r')
         r = f.read()
@@ -50,7 +51,7 @@ class IndexHandler(BaseHandler):
             if len(n) < 2 : continue
             name = n.split(':')[0]
             var = n.split()[1]
-            mem[name] = int(var) * 1024 # 单位默认是K，乘以1024转换为字节
+            mem[name] = int(var) * DEFAULT_UNIT
         mem['MemUsed'] = mem['MemTotal'] - mem['MemFree'] - mem['Buffers'] - mem['Cached']
         MemUsedPercent = mem['MemUsed'] * 100 / mem['MemTotal']
         mem['MemUsedPercent'] = MemUsedPercent

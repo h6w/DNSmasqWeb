@@ -10,6 +10,8 @@ import tornado.process
 import time
 from xk_config.xk_setting import *
 from xk_config.xk_url import *
+from tornadobabel import locale
+from tornadobabel.mixin import TornadoBabelMixin
 
 MainSetting = dict(
     template_path = 'xk_html',
@@ -23,6 +25,8 @@ MainSetting = dict(
 )
 
 class HttpApplication(tornado.web.Application):
+    MYSQL_POLL_FREQUENCY = 3 * 60 * 1000
+
     def __init__(self):
         handlers = HandlersURL
         settings = MainSetting
@@ -35,11 +39,15 @@ class HttpApplication(tornado.web.Application):
             time_zone='+8:00',charset='utf8')
 
         ping_db = lambda: self.db.query("select now()")
-        #def print_test():
-        #    print "Hello Test"
-        # 每3分钟执行一次数据库查询,防止mysql gone away,时间间隔要小于msyql的wait_timeout时长
-        tornado.ioloop.PeriodicCallback(ping_db,3 * 60 * 1000).start()
-        #tornado.ioloop.PeriodicCallback(print_test,1 * 30 * 1000).start()
+        tornado.ioloop.PeriodicCallback(ping_db,MYSQL_POLL_FREQUENCY).start()
+
+class ProfileHandler(TornadoBabelMixin, tornado.web.RequestHandler):
+    def get_user_locale(self):
+        if self.current_user:
+            return locale.get(self.current_user.locale)
+
+        # Fallback to browser based locale detection
+        return self.get_browser_locale()
 
 def main():
     if options.ipv6:
@@ -47,6 +55,7 @@ def main():
     else:
         host = "0.0.0.0"
     tornado.options.parse_command_line()
+    locale.load_gettext_translations('translations', 'messages')
 
     if options.debug:
         http_server = tornado.httpserver.HTTPServer(request_callback=HttpApplication(),xheaders=True)
