@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #-*- coding:utf8 -*-
 # Desgin By Xiaok
 from tornado.options import define, options

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # Desgin By Xiaok
 __all__ = [
     'xk_dhcp',
