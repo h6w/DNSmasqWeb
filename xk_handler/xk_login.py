@@ -16,10 +16,10 @@ class LoginHandler(BaseHandler):
         user = self.db.get('''select id,username,status from xk_users where username = %s and password = md5(%s)''',username,password)
         if user:
             if user['status'] == 'no':
-                self.write('''<script type="text/javascript" >alert("'''._("Users disabled, please contact the administrator!").'''");history.go(-1);</script>''')
+                self.write('''<script type="text/javascript" >alert("''' + _("Users disabled, please contact the administrator!") + '''");history.go(-1);</script>''')
                 return
         else:
-            self.write('''<script type="text/javascript" >alert("'''._("Wrong username or password!").'''");history.go(-1);</script>''')
+            self.write('''<script type="text/javascript" >alert("''' + _("Wrong username or password!") + '''");history.go(-1);</script>''')
             return
         headers = self.request.headers
         login_host = self.request.remote_ip
