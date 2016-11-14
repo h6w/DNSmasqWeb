@@ -39,7 +39,7 @@ class HttpApplication(tornado.web.Application):
             time_zone='+8:00',charset='utf8')
 
         ping_db = lambda: self.db.query("select now()")
-        tornado.ioloop.PeriodicCallback(ping_db,MYSQL_POLL_FREQUENCY).start()
+        tornado.ioloop.PeriodicCallback(ping_db,self.MYSQL_POLL_FREQUENCY).start()
 
 class ProfileHandler(TornadoBabelMixin, tornado.web.RequestHandler):
     def get_user_locale(self):
