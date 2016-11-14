@@ -136,7 +136,7 @@ def Perm(method):
         if permission:
             is_admin = permission['is_admin']
             if is_admin == "no":
-                self.write(''' <script type="text/javascript" >alert("'''._("Sorry, you do not have permission to perform that operation!").'''");</script> '''._("Sorry, you do not have permission to perform that operation!"))
+                self.write(''' <script type="text/javascript" >alert("''' + _("Sorry, you do not have permission to perform that operation!") + '''");</script> ''' + _("Sorry, you do not have permission to perform that operation!"))
                 return
         return method(self, *args, **kwargs)
     return wrapper
