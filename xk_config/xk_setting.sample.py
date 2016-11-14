@@ -20,3 +20,6 @@ define("mysql_host", default="127.0.0.1:3306", help="Database Host and Port")
 define("mysql_database", default="xk_dnsmasq", help="Database Name")
 define("mysql_user", default="test", help="Database User")
 define("mysql_password", default="test", help="Database Password")
+
+# Locale
+define("timezone", default="+00:00", help="Default timezone")

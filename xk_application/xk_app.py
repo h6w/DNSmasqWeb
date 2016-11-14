@@ -36,7 +36,7 @@ class HttpApplication(tornado.web.Application):
         self.db = torndb.Connection(
             host=options.mysql_host, database=options.mysql_database,
             user=options.mysql_user, password=options.mysql_password,
-            time_zone='+8:00',charset='utf8')
+            time_zone=options.timezone,charset='utf8')
 
         ping_db = lambda: self.db.query("select now()")
         tornado.ioloop.PeriodicCallback(ping_db,self.MYSQL_POLL_FREQUENCY).start()
