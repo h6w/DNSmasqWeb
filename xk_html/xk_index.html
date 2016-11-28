@@ -33,7 +33,7 @@
 								<a href="/users"><span class="count">2</span> {{ _('users') }}</a>
 							</li>
 							<li class="last">
-								<a href="javascript:void(0);"><span class="count">{{data['uptime']['days']}}{{ _('days') }}{{data['uptime']['hours']}}{{ _('hours') }}{{data['uptime']['minutes']}}{{ _('minute') }}</span> {{ _('uptime') }}</a>
+								<a href="javascript:void(0);"><span class="count">{{data['uptime']['days']}} {{ _('days') }} {{data['uptime']['hours']}} {{ _('hours') }} {{data['uptime']['minutes']}} {{ _('minute') }}</span> {{ _('uptime') }}</a>
 							</li>
 						</ul>
 					</div>
@@ -69,14 +69,14 @@
 						<li>
                             {% if data['dnsmasq']['status'] == 0 %}
                                 {% set st_color = 'green' %}
-                                {% set st_msg = '{{ _('Running') }} ...' %}
+                                {% set st_msg = _('Running')+'...' %}
                                 {% set next_run = 'stop' %}
-                                {% set next_run_msg = '{{ _('Stop') }}' %}
+                                {% set next_run_msg = _('Stop') %}
                             {% else %}
                                 {% set st_color = 'red' %}
-                                {% set st_msg = '{{ _('service exception') }}' %}
+                                {% set st_msg = _('service exception') %}
                                 {% set next_run = 'start' %}
-                                {% set next_run_msg = '{{ _('Start') }}' %}
+                                {% set next_run_msg = _('Start') %}
                             {% endif %}
 							<i class="icon-asterisk"></i>
                             <a class="title" href="javascript:void(0);" onclick="alert('DNSmasq {{st_msg}}')">DNSmasq</a> <font color="{{st_color}}">{{st_msg}}</font> 
