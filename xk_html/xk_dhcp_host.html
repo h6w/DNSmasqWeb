@@ -106,7 +106,7 @@
                                 <td>{{ d['hostname'] }}</td>
                                 <td>{{ d['mac'] }}</td>
                                 <td>{{ d['ip'] }}</td>
-                                <td><a href="/public/api?module=dhcp_host&fun=ch_action&id={{d['id']}}&value={{action_value}}" onclick="return confirm('{{action_qst}');" title="{{action_title}}">{{ action }}</a></td>
+                                <td><a href="/public/api?module=dhcp_host&fun=ch_action&id={{d['id']}}&value={{action_value}}" onclick="return confirm('{{action_qst}}');" title="{{action_title}}">{{ action }}</a></td>
                                 <td>{{ d['comment'] or '' }}</td>
                                 <td>
                                     <a href="javascript:void(0);" onclick="to_edit({{d['id']}})">{{ _('Edit') }}</a> |

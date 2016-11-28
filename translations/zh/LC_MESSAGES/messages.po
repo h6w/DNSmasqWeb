@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-11-28 17:04+1100\n"
+"POT-Creation-Date: 2016-11-28 17:07+1100\n"
 "PO-Revision-Date: 2016-05-13 13:36+1000\n"
 "Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
 "Language: zh\n"
@@ -30,25 +30,198 @@ msgstr "用户已禁用, 请联系管理员！"
 msgid "Wrong username or password!"
 msgstr "用户名或密码错误！"
 
-#: xk_html/xk_dhcp_pool.html:8 xk_html/xk_nav.html:17
-#: xk_html/xk_top_nav.html:22
+#: xk_html/xk_dhcp_host.html:8 xk_html/xk_dhcp_pool.html:8
+#: xk_html/xk_nav.html:17 xk_html/xk_top_nav.html:22
 msgid "DHCP Management"
 msgstr "DHCP管理"
 
-#: xk_html/xk_dhcp_pool.html:21
-msgid "Address Pool Management"
-msgstr "地址池管理"
-
-#: xk_html/xk_dhcp_pool.html:21 xk_html/xk_top_nav.html:25
+#: xk_html/xk_dhcp_host.html:20 xk_html/xk_dhcp_pool.html:21
+#: xk_html/xk_top_nav.html:25
 msgid "Binding Rules"
 msgstr "绑定规则"
 
+#: xk_html/xk_dhcp_host.html:20 xk_html/xk_dhcp_pool.html:21
+msgid "Address Pool Management"
+msgstr "地址池管理"
+
+#: xk_html/xk_dhcp_host.html:22
+msgid "Add rule"
+msgstr "添加规则"
+
+#: xk_html/xk_dhcp_host.html:23
+msgid "Refresh configuration"
+msgstr "刷新配置"
+
+#: xk_html/xk_dhcp_host.html:29 xk_html/xk_dhcp_host.html:71
+#: xk_html/xk_index.html:46
+msgid "CPU Name"
+msgstr "主机名"
+
+#: xk_html/xk_dhcp_host.html:35 xk_html/xk_dhcp_host.html:72
+msgid "MAC Address"
+msgstr "MAC地址"
+
+#: xk_html/xk_dhcp_host.html:41 xk_html/xk_dhcp_host.html:73
+#: xk_html/xk_index.html:53
+msgid "IP Address"
+msgstr "IP地址"
+
+#: xk_html/xk_dhcp_host.html:47
+msgid "Rule Action"
+msgstr "规则动作"
+
+#: xk_html/xk_dhcp_host.html:50 xk_html/xk_dhcp_host.html:101
+#: xk_html/xk_dhcp_host.html:125
+msgid "Allow"
+msgstr "允许"
+
+#: xk_html/xk_dhcp_host.html:51 xk_html/xk_dhcp_host.html:95
+#: xk_html/xk_dhcp_host.html:126
+msgid "Ignore"
+msgstr "禁止"
+
+#: xk_html/xk_dhcp_host.html:56 xk_html/xk_dhcp_pool.html:114
+msgid "Comment"
+msgstr "备注信息"
+
+#: xk_html/xk_dhcp_host.html:62 xk_html/xk_dhcp_host.html:132
+#: xk_html/xk_domain.html:49 xk_html/xk_domain.html:86
+#: xk_html/xk_record.html:75 xk_html/xk_record.html:127
+#: xk_html/xk_users.html:53 xk_html/xk_users.html:95 xk_html/xk_users.html:140
+msgid "Cancel"
+msgstr "取消"
+
+#: xk_html/xk_dhcp_host.html:62 xk_html/xk_dhcp_host.html:131
 #: xk_html/xk_dhcp_pool.html:23 xk_html/xk_domain.html:48
 #: xk_html/xk_domain.html:85 xk_html/xk_record.html:74
 #: xk_html/xk_record.html:126 xk_html/xk_users.html:52 xk_html/xk_users.html:94
 #: xk_html/xk_users.html:141
 msgid "Save"
 msgstr "保存"
+
+#: xk_html/xk_dhcp_host.html:74
+msgid "Action"
+msgstr "动作"
+
+#: xk_html/xk_dhcp_host.html:75 xk_html/xk_domain.html:35
+#: xk_html/xk_record.html:49 xk_html/xk_users.html:37
+msgid "Remark"
+msgstr "备注"
+
+#: xk_html/xk_dhcp_host.html:76 xk_html/xk_domain.html:36
+#: xk_html/xk_record.html:50 xk_html/xk_users.html:38
+msgid "Operation"
+msgstr "操作"
+
+#: xk_html/xk_dhcp_host.html:83 xk_html/xk_domain.html:55
+#: xk_html/xk_record.html:81
+msgid "Suspend"
+msgstr "暂停"
+
+#: xk_html/xk_dhcp_host.html:84
+msgid "Really suspend these records?"
+msgstr "确认已允许该记录？"
+
+#: xk_html/xk_dhcp_host.html:88 xk_html/xk_users.html:64
+msgid "Enable"
+msgstr "启用"
+
+#: xk_html/xk_dhcp_host.html:89
+msgid "Really enable these records?"
+msgstr "确认已禁止该记录？"
+
+#: xk_html/xk_dhcp_host.html:93
+msgid "Allowed"
+msgstr "禁止"
+
+#: xk_html/xk_dhcp_host.html:96
+msgid "Really ignore these records?"
+msgstr "确认暂停记录？"
+
+#: xk_html/xk_dhcp_host.html:97
+msgid "Click to ignore these records"
+msgstr "点击禁止该记录"
+
+#: xk_html/xk_dhcp_host.html:99
+msgid "Ignored"
+msgstr "已禁止"
+
+#: xk_html/xk_dhcp_host.html:102
+msgid "Really allow these records?"
+msgstr "确认允许该记录？"
+
+#: xk_html/xk_dhcp_host.html:103
+msgid "Click to allow these records"
+msgstr "点击允许该记录"
+
+#: xk_html/xk_dhcp_host.html:112 xk_html/xk_domain.html:71
+#: xk_html/xk_record.html:99 xk_html/xk_users.html:77
+msgid "Edit"
+msgstr "编辑"
+
+#: xk_html/xk_dhcp_host.html:114
+msgid "Delete these records"
+msgstr "i确认删除该记录？"
+
+#: xk_html/xk_dhcp_host.html:114 xk_html/xk_domain.html:73
+#: xk_html/xk_record.html:101 xk_html/xk_users.html:80
+msgid "Delete"
+msgstr "删除"
+
+#: xk_html/xk_dhcp_host.html:153
+msgid "Please enter MAC address!"
+msgstr "请输入MAC地址！"
+
+#: xk_html/xk_dhcp_host.html:158
+msgid "Please enter IP address!"
+msgstr "请输入IP地址！"
+
+#: xk_html/xk_dhcp_host.html:169 xk_html/xk_domain.html:125
+#: xk_html/xk_record.html:171 xk_static/js/xk_users.js:59
+msgid "Added successfully"
+msgstr "添加成功"
+
+#: xk_html/xk_dhcp_host.html:172 xk_html/xk_dhcp_host.html:228
+msgid "MAC address already exists!"
+msgstr "MAC地址已存在！"
+
+#: xk_html/xk_dhcp_host.html:176 xk_html/xk_dhcp_host.html:232
+msgid "IP address already exists!"
+msgstr "IP地址已存在！"
+
+#: xk_html/xk_dhcp_host.html:180 xk_html/xk_dhcp_host.html:236
+#: xk_html/xk_dhcp_pool.html:182 xk_html/xk_domain.html:131
+#: xk_html/xk_domain.html:182 xk_html/xk_record.html:177
+#: xk_html/xk_record.html:217 xk_html/xk_record.html:256
+msgid "Alert"
+msgstr "提示"
+
+#: xk_html/xk_dhcp_host.html:180
+msgid "Add rule failed!"
+msgstr "提示：添加规则失败！"
+
+#: xk_html/xk_dhcp_host.html:185 xk_html/xk_dhcp_host.html:241
+#: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:135
+#: xk_html/xk_domain.html:187 xk_html/xk_index.html:128
+#: xk_html/xk_record.html:181 xk_html/xk_record.html:221
+#: xk_html/xk_record.html:261 xk_html/xk_users_logs.html:85
+msgid "Note: Internal Server Error"
+msgstr "提示：服务器内部错误"
+
+#: xk_html/xk_dhcp_host.html:211 xk_html/xk_domain.html:167
+#: xk_html/xk_record.html:238
+msgid "Edit saved records"
+msgstr "编辑保存记录"
+
+#: xk_html/xk_dhcp_host.html:225 xk_html/xk_domain.html:179
+#: xk_html/xk_record.html:253 xk_static/js/xk_users.js:113
+msgid "Successfully modified"
+msgstr "修改成功！"
+
+#: xk_html/xk_dhcp_host.html:236 xk_html/xk_domain.html:182
+#: xk_html/xk_record.html:256
+msgid "Failed to edit"
+msgstr "修改失败"
 
 #: xk_html/xk_dhcp_pool.html:30
 msgid "DHCP Enable"
@@ -96,10 +269,6 @@ msgstr "主域名服务器"
 msgid "Secondary Domain Name Server"
 msgstr "辅助域名服务器"
 
-#: xk_html/xk_dhcp_pool.html:114
-msgid "Comment"
-msgstr "备注信息"
-
 #: xk_html/xk_dhcp_pool.html:148
 msgid "Please enter starting address!"
 msgstr "请输入起始地址!"
@@ -124,22 +293,9 @@ msgstr "保存成功"
 msgid "Refresh the DHCP configuration"
 msgstr "是否刷新DHCP配置"
 
-#: xk_html/xk_dhcp_pool.html:182 xk_html/xk_domain.html:131
-#: xk_html/xk_domain.html:182 xk_html/xk_record.html:177
-#: xk_html/xk_record.html:217 xk_html/xk_record.html:256
-msgid "Alert"
-msgstr "提示"
-
 #: xk_html/xk_dhcp_pool.html:182
 msgid "Save failed!"
 msgstr "保存失败!"
-
-#: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:135
-#: xk_html/xk_domain.html:187 xk_html/xk_index.html:128
-#: xk_html/xk_record.html:181 xk_html/xk_record.html:221
-#: xk_html/xk_record.html:261 xk_html/xk_users_logs.html:85
-msgid "Note: Internal Server Error"
-msgstr "提示：服务器内部错误"
 
 #: xk_html/xk_domain.html:8 xk_html/xk_domain.html:21 xk_html/xk_nav.html:11
 #: xk_html/xk_top_nav.html:17
@@ -166,24 +322,6 @@ msgstr "创建时间"
 msgid "Updated"
 msgstr "更新时间"
 
-#: xk_html/xk_domain.html:35 xk_html/xk_record.html:49 xk_html/xk_users.html:37
-msgid "Remark"
-msgstr "备注"
-
-#: xk_html/xk_domain.html:36 xk_html/xk_record.html:50 xk_html/xk_users.html:38
-msgid "Operation"
-msgstr "操作"
-
-#: xk_html/xk_domain.html:49 xk_html/xk_domain.html:86
-#: xk_html/xk_record.html:75 xk_html/xk_record.html:127
-#: xk_html/xk_users.html:53 xk_html/xk_users.html:95 xk_html/xk_users.html:140
-msgid "Cancel"
-msgstr "取消"
-
-#: xk_html/xk_domain.html:55 xk_html/xk_record.html:81
-msgid "Suspend"
-msgstr "暂停"
-
 #: xk_html/xk_domain.html:56
 msgid "Really suspend this domain name?"
 msgstr "确认暂停该域名？"
@@ -208,18 +346,9 @@ msgstr "的"
 msgid "records"
 msgstr "记录"
 
-#: xk_html/xk_domain.html:71 xk_html/xk_record.html:99 xk_html/xk_users.html:77
-msgid "Edit"
-msgstr "编辑"
-
 #: xk_html/xk_domain.html:73
 msgid "Delete this domain name and all related records"
 msgstr "确认删除该域名，并且同时删除该域名所有记录"
-
-#: xk_html/xk_domain.html:73 xk_html/xk_record.html:101
-#: xk_html/xk_users.html:80
-msgid "Delete"
-msgstr "删除"
 
 #: xk_html/xk_domain.html:94 xk_html/xk_record.html:135
 #: xk_html/xk_users.html:103 xk_html/xk_users_logs.html:56
@@ -234,11 +363,6 @@ msgstr "请输入域名!"
 msgid "Please enter Domain Name Record!"
 msgstr "请输入域名文件!"
 
-#: xk_html/xk_domain.html:125 xk_html/xk_record.html:171
-#: xk_static/js/xk_users.js:59
-msgid "Added successfully"
-msgstr "添加成功"
-
 #: xk_html/xk_domain.html:128
 msgid "Domain name already exists!"
 msgstr "域名已存在!"
@@ -250,19 +374,6 @@ msgstr "添加域名失败!"
 #: xk_html/xk_domain.html:146
 msgid "Enter the domain profile"
 msgstr "同步动态输入域名配置文件"
-
-#: xk_html/xk_domain.html:167 xk_html/xk_record.html:238
-msgid "Edit saved records"
-msgstr "编辑保存记录"
-
-#: xk_html/xk_domain.html:179 xk_html/xk_record.html:253
-#: xk_static/js/xk_users.js:113
-msgid "Successfully modified"
-msgstr "修改成功！"
-
-#: xk_html/xk_domain.html:182 xk_html/xk_record.html:256
-msgid "Failed to edit"
-msgstr "修改失败"
 
 #: xk_html/xk_index.html:8
 msgid "Console"
@@ -288,10 +399,6 @@ msgstr "运行时间"
 msgid "system message"
 msgstr "系统信息"
 
-#: xk_html/xk_index.html:46
-msgid "CPU Name"
-msgstr "主机名"
-
 #: xk_html/xk_index.html:47
 msgid "Refresh Data"
 msgstr "刷新数据"
@@ -307,10 +414,6 @@ msgstr "关闭服务器"
 #: xk_html/xk_index.html:50
 msgid "Operating System"
 msgstr "操作系统"
-
-#: xk_html/xk_index.html:53
-msgid "IP Address"
-msgstr "IP地址"
 
 #: xk_html/xk_index.html:54
 msgid "Outflow rate"
@@ -585,10 +688,6 @@ msgstr "禁用"
 #: xk_html/xk_users.html:60
 msgid "Really disable this user?"
 msgstr "确认禁用该用户？"
-
-#: xk_html/xk_users.html:64
-msgid "Enable"
-msgstr "启用"
 
 #: xk_html/xk_users.html:65
 msgid "Really enable this user?"
