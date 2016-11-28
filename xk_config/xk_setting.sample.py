@@ -22,4 +22,4 @@ define("mysql_user", default="test", help="Database User")
 define("mysql_password", default="test", help="Database Password")
 
 # Locale
-define("timezone", default="+00:00", help="Default timezone")
+define("timezone", default="+0:00", help="Default timezone")

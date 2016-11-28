@@ -51,7 +51,7 @@ class IndexHandler(BaseHandler):
             if len(n) < 2 : continue
             name = n.split(':')[0]
             var = n.split()[1]
-            mem[name] = int(var) * DEFAULT_UNIT
+            mem[name] = int(var) * self.DEFAULT_UNIT
         mem['MemUsed'] = mem['MemTotal'] - mem['MemFree'] - mem['Buffers'] - mem['Cached']
         MemUsedPercent = mem['MemUsed'] * 100 / mem['MemTotal']
         mem['MemUsedPercent'] = MemUsedPercent
