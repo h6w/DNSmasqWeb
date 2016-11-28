@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-11-28 18:27+1100\n"
+"POT-Creation-Date: 2016-11-28 18:30+1100\n"
 "PO-Revision-Date: 2016-05-13 13:36+1000\n"
 "Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
 "Language: zh\n"
@@ -395,7 +395,7 @@ msgid "uptime"
 msgstr "运行时间"
 
 #: xk_html/xk_index.html:42
-msgid "system message"
+msgid "Host Information"
 msgstr "系统信息"
 
 #: xk_html/xk_index.html:46
@@ -864,4 +864,7 @@ msgstr "提示：修改密码失败"
 
 #~ msgid "Really activate the domain name?"
 #~ msgstr "确认开启该记录？"
+
+#~ msgid "system message"
+#~ msgstr "系统信息"
 

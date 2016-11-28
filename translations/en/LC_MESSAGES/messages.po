@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: tudor@tudorholton.com\n"
-"POT-Creation-Date: 2016-11-28 18:27+1100\n"
+"POT-Creation-Date: 2016-11-28 18:30+1100\n"
 "PO-Revision-Date: 2016-05-13 13:34+1000\n"
 "Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
 "Language: en\n"
@@ -395,8 +395,8 @@ msgid "uptime"
 msgstr "uptime"
 
 #: xk_html/xk_index.html:42
-msgid "system message"
-msgstr "system message"
+msgid "Host Information"
+msgstr "Host Information"
 
 #: xk_html/xk_index.html:46
 msgid "Hostname"
@@ -864,4 +864,7 @@ msgstr "Error: Failed to update password"
 
 #~ msgid "Really activate the domain name?"
 #~ msgstr "Really activate the domain name?"
+
+#~ msgid "system message"
+#~ msgstr "system message"
 
