@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-11-13 15:10+1100\n"
+"POT-Creation-Date: 2016-11-28 16:25+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: xk_application/xk_main.py:138
+#: xk_application/xk_main.py:139
 msgid "Sorry, you do not have permission to perform that operation!"
 msgstr ""
 
@@ -43,9 +43,9 @@ msgid "Binding Rules"
 msgstr ""
 
 #: xk_html/xk_dhcp_pool.html:23 xk_html/xk_domain.html:48
-#: xk_html/xk_domain.html:83 xk_html/xk_record.html:74
-#: xk_html/xk_record.html:124 xk_html/xk_users.html:52 xk_html/xk_users.html:92
-#: xk_html/xk_users.html:139
+#: xk_html/xk_domain.html:85 xk_html/xk_record.html:74
+#: xk_html/xk_record.html:126 xk_html/xk_users.html:52 xk_html/xk_users.html:94
+#: xk_html/xk_users.html:141
 msgid "Save"
 msgstr ""
 
@@ -66,6 +66,7 @@ msgid "Gateway Address"
 msgstr ""
 
 #: xk_html/xk_dhcp_pool.html:78 xk_html/xk_domain.html:31
+#: xk_html/xk_index.html:27
 msgid "Domain Name"
 msgstr ""
 
@@ -75,13 +76,14 @@ msgstr ""
 
 #: xk_html/xk_dhcp_pool.html:87 xk_html/xk_dhcp_pool.html:88
 #: xk_html/xk_dhcp_pool.html:89 xk_html/xk_dhcp_pool.html:90
-#: xk_html/xk_dhcp_pool.html:91
+#: xk_html/xk_dhcp_pool.html:91 xk_html/xk_index.html:36
 msgid "hours"
 msgstr ""
 
 #: xk_html/xk_dhcp_pool.html:92 xk_html/xk_dhcp_pool.html:93
 #: xk_html/xk_dhcp_pool.html:94 xk_html/xk_dhcp_pool.html:95
 #: xk_html/xk_dhcp_pool.html:96 xk_html/xk_dhcp_pool.html:97
+#: xk_html/xk_index.html:36
 msgid "days"
 msgstr ""
 
@@ -121,9 +123,9 @@ msgstr ""
 msgid "Refresh the DHCP configuration"
 msgstr ""
 
-#: xk_html/xk_dhcp_pool.html:182 xk_html/xk_domain.html:129
-#: xk_html/xk_domain.html:180 xk_html/xk_record.html:175
-#: xk_html/xk_record.html:215 xk_html/xk_record.html:254
+#: xk_html/xk_dhcp_pool.html:182 xk_html/xk_domain.html:131
+#: xk_html/xk_domain.html:182 xk_html/xk_record.html:177
+#: xk_html/xk_record.html:217 xk_html/xk_record.html:256
 msgid "Alert"
 msgstr ""
 
@@ -131,10 +133,10 @@ msgstr ""
 msgid "Save failed!"
 msgstr ""
 
-#: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:133
-#: xk_html/xk_domain.html:185 xk_html/xk_record.html:179
-#: xk_html/xk_record.html:219 xk_html/xk_record.html:259
-#: xk_html/xk_users_logs.html:85
+#: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:135
+#: xk_html/xk_domain.html:187 xk_html/xk_index.html:128
+#: xk_html/xk_record.html:181 xk_html/xk_record.html:221
+#: xk_html/xk_record.html:261 xk_html/xk_users_logs.html:85
 msgid "Note: Internal Server Error"
 msgstr ""
 
@@ -171,93 +173,238 @@ msgstr ""
 msgid "Operation"
 msgstr ""
 
-#: xk_html/xk_domain.html:49 xk_html/xk_domain.html:84
-#: xk_html/xk_record.html:75 xk_html/xk_record.html:125
-#: xk_html/xk_users.html:53 xk_html/xk_users.html:93 xk_html/xk_users.html:138
+#: xk_html/xk_domain.html:49 xk_html/xk_domain.html:86
+#: xk_html/xk_record.html:75 xk_html/xk_record.html:127
+#: xk_html/xk_users.html:53 xk_html/xk_users.html:95 xk_html/xk_users.html:140
 msgid "Cancel"
 msgstr ""
 
-#: xk_html/xk_domain.html:63
+#: xk_html/xk_domain.html:55 xk_html/xk_record.html:81
+msgid "Suspend"
+msgstr ""
+
+#: xk_html/xk_domain.html:56
+msgid "Really suspend this domain name?"
+msgstr ""
+
+#: xk_html/xk_domain.html:60 xk_html/xk_record.html:86
+msgid "Activate"
+msgstr ""
+
+#: xk_html/xk_domain.html:61
+msgid "Really activate this domain name?"
+msgstr ""
+
+#: xk_html/xk_domain.html:65
 msgid "View"
 msgstr ""
 
-#: xk_html/xk_domain.html:63
+#: xk_html/xk_domain.html:65
 msgid "of"
 msgstr ""
 
-#: xk_html/xk_domain.html:63
+#: xk_html/xk_domain.html:65 xk_html/xk_index.html:30
 msgid "records"
 msgstr ""
 
-#: xk_html/xk_domain.html:69 xk_html/xk_record.html:97 xk_html/xk_users.html:75
+#: xk_html/xk_domain.html:71 xk_html/xk_record.html:99 xk_html/xk_users.html:77
 msgid "Edit"
 msgstr ""
 
-#: xk_html/xk_domain.html:70 xk_html/xk_record.html:98 xk_html/xk_users.html:77
-msgid "Confirm"
-msgstr ""
-
-#: xk_html/xk_domain.html:70
-msgid "this domain name?"
-msgstr ""
-
-#: xk_html/xk_domain.html:71
+#: xk_html/xk_domain.html:73
 msgid "Delete this domain name and all related records"
 msgstr ""
 
-#: xk_html/xk_domain.html:71 xk_html/xk_record.html:99 xk_html/xk_users.html:78
+#: xk_html/xk_domain.html:73 xk_html/xk_record.html:101
+#: xk_html/xk_users.html:80
 msgid "Delete"
 msgstr ""
 
-#: xk_html/xk_domain.html:92 xk_html/xk_record.html:133
-#: xk_html/xk_users.html:101 xk_html/xk_users_logs.html:56
+#: xk_html/xk_domain.html:94 xk_html/xk_record.html:135
+#: xk_html/xk_users.html:103 xk_html/xk_users_logs.html:56
 msgid "More"
 msgstr ""
 
-#: xk_html/xk_domain.html:107
+#: xk_html/xk_domain.html:109
 msgid "Please enter Domain Name!"
 msgstr ""
 
-#: xk_html/xk_domain.html:112
+#: xk_html/xk_domain.html:114
 msgid "Please enter Domain Name Record!"
 msgstr ""
 
-#: xk_html/xk_domain.html:123 xk_html/xk_record.html:169
+#: xk_html/xk_domain.html:125 xk_html/xk_record.html:171
 #: xk_static/js/xk_users.js:59
 msgid "Added successfully"
 msgstr ""
 
-#: xk_html/xk_domain.html:126
+#: xk_html/xk_domain.html:128
 msgid "Domain name already exists!"
 msgstr ""
 
-#: xk_html/xk_domain.html:129
+#: xk_html/xk_domain.html:131
 msgid "Add domain name failed!"
 msgstr ""
 
-#: xk_html/xk_domain.html:144
+#: xk_html/xk_domain.html:146
 msgid "Enter the domain profile"
 msgstr ""
 
-#: xk_html/xk_domain.html:165 xk_html/xk_record.html:236
+#: xk_html/xk_domain.html:167 xk_html/xk_record.html:238
 msgid "Edit saved records"
 msgstr ""
 
-#: xk_html/xk_domain.html:177 xk_html/xk_record.html:251
+#: xk_html/xk_domain.html:179 xk_html/xk_record.html:253
 #: xk_static/js/xk_users.js:113
 msgid "Successfully modified"
 msgstr ""
 
-#: xk_html/xk_domain.html:180 xk_html/xk_record.html:254
+#: xk_html/xk_domain.html:182 xk_html/xk_record.html:256
 msgid "Failed to edit"
 msgstr ""
 
-#: xk_html/xk_login.html:14 xk_html/xk_users.html:31 xk_html/xk_users.html:114
+#: xk_html/xk_index.html:8
+msgid "Console"
+msgstr ""
+
+#: xk_html/xk_index.html:22 xk_html/xk_nav.html:8 xk_html/xk_top_nav.html:12
+msgid "Dashboard"
+msgstr ""
+
+#: xk_html/xk_index.html:33 xk_html/xk_nav.html:26
+msgid "users"
+msgstr ""
+
+#: xk_html/xk_index.html:36
+msgid "minutes"
+msgstr ""
+
+#: xk_html/xk_index.html:36
+msgid "uptime"
+msgstr ""
+
+#: xk_html/xk_index.html:42
+msgid "system message"
+msgstr ""
+
+#: xk_html/xk_index.html:46
+msgid "CPU Name"
+msgstr ""
+
+#: xk_html/xk_index.html:47
+msgid "Refresh Data"
+msgstr ""
+
+#: xk_html/xk_index.html:48
+msgid "Restart the Server"
+msgstr ""
+
+#: xk_html/xk_index.html:49
+msgid "Shutdown the Server"
+msgstr ""
+
+#: xk_html/xk_index.html:50
+msgid "Operating System"
+msgstr ""
+
+#: xk_html/xk_index.html:53
+msgid "IP Address"
+msgstr ""
+
+#: xk_html/xk_index.html:54
+msgid "Outflow rate"
+msgstr ""
+
+#: xk_html/xk_index.html:54
+msgid "Inflow rate"
+msgstr ""
+
+#: xk_html/xk_index.html:57
+msgid "CPU usage is"
+msgstr ""
+
+#: xk_html/xk_index.html:61
+msgid "System idle rate"
+msgstr ""
+
+#: xk_html/xk_index.html:67
+msgid "System Status"
+msgstr ""
+
+#: xk_html/xk_index.html:72
+msgid "Running"
+msgstr ""
+
+#: xk_html/xk_index.html:74
+msgid "Stop"
+msgstr ""
+
+#: xk_html/xk_index.html:77
+msgid "service exception"
+msgstr ""
+
+#: xk_html/xk_index.html:79
+msgid "Start"
+msgstr ""
+
+#: xk_html/xk_index.html:83
+msgid "Reload configuration"
+msgstr ""
+
+#: xk_html/xk_index.html:83
+msgid "Reload"
+msgstr ""
+
+#: xk_html/xk_index.html:84
+msgid "Restart service"
+msgstr ""
+
+#: xk_html/xk_index.html:84
+msgid "Restart"
+msgstr ""
+
+#: xk_html/xk_index.html:85
+msgid "service"
+msgstr ""
+
+#: xk_html/xk_index.html:86
+msgid "Version"
+msgstr ""
+
+#: xk_html/xk_index.html:89
+msgid "System Load"
+msgstr ""
+
+#: xk_html/xk_index.html:90
+msgid "minute"
+msgstr ""
+
+#: xk_html/xk_index.html:93
+msgid "Disk Usage"
+msgstr ""
+
+#: xk_html/xk_index.html:97
+msgid "Memory Usage"
+msgstr ""
+
+#: xk_html/xk_index.html:117
+msgid "Operation Succeeded"
+msgstr ""
+
+#: xk_html/xk_index.html:121
+msgid "Operation Failed"
+msgstr ""
+
+#: xk_html/xk_index.html:124
+msgid "We encountered an unknown problem"
+msgstr ""
+
+#: xk_html/xk_login.html:14 xk_html/xk_users.html:31 xk_html/xk_users.html:116
 #: xk_html/xk_users_logs.html:31
 msgid "Username"
 msgstr ""
 
-#: xk_html/xk_login.html:15 xk_html/xk_users.html:48 xk_html/xk_users.html:76
+#: xk_html/xk_login.html:15 xk_html/xk_users.html:48 xk_html/xk_users.html:78
 msgid "Password"
 msgstr ""
 
@@ -267,10 +414,6 @@ msgstr ""
 
 #: xk_html/xk_login.html:18
 msgid "Log in"
-msgstr ""
-
-#: xk_html/xk_nav.html:8 xk_html/xk_top_nav.html:12
-msgid "Dashboard"
 msgstr ""
 
 #: xk_html/xk_nav.html:14 xk_html/xk_top_nav.html:15
@@ -283,10 +426,6 @@ msgstr ""
 
 #: xk_html/xk_nav.html:23
 msgid "System Settings"
-msgstr ""
-
-#: xk_html/xk_nav.html:26
-msgid "users"
 msgstr ""
 
 #: xk_html/xk_nav.html:29 xk_html/xk_top_nav.html:13 xk_html/xk_users.html:8
@@ -350,47 +489,51 @@ msgstr ""
 msgid "MX Priority"
 msgstr ""
 
-#: xk_html/xk_record.html:98
-msgid "this record?"
+#: xk_html/xk_record.html:82
+msgid "Really suspend the domain record?"
 msgstr ""
 
-#: xk_html/xk_record.html:99
+#: xk_html/xk_record.html:87
+msgid "Really activate the domain record?"
+msgstr ""
+
+#: xk_html/xk_record.html:101
 msgid "Really delete this record?"
 msgstr ""
 
-#: xk_html/xk_record.html:148
+#: xk_html/xk_record.html:150
 msgid "Please enter records!"
 msgstr ""
 
-#: xk_html/xk_record.html:153
+#: xk_html/xk_record.html:155
 msgid "Please enter Record Values!"
 msgstr ""
 
-#: xk_html/xk_record.html:158
+#: xk_html/xk_record.html:160
 msgid "Please enter MX priority!"
 msgstr ""
 
-#: xk_html/xk_record.html:172
+#: xk_html/xk_record.html:174
 msgid "Record already exists!"
 msgstr ""
 
-#: xk_html/xk_record.html:175
+#: xk_html/xk_record.html:177
 msgid "Failed to add record"
 msgstr ""
 
-#: xk_html/xk_record.html:203
+#: xk_html/xk_record.html:205
 msgid "Synchronization successful"
 msgstr ""
 
-#: xk_html/xk_record.html:206
+#: xk_html/xk_record.html:208
 msgid "DNSmasq failed to restart"
 msgstr ""
 
-#: xk_html/xk_record.html:209
+#: xk_html/xk_record.html:211
 msgid "Domain name MD5 checksum failure, proceed anyway"
 msgstr ""
 
-#: xk_html/xk_record.html:215
+#: xk_html/xk_record.html:217
 msgid "Synchronization failed to parse"
 msgstr ""
 
@@ -434,27 +577,39 @@ msgstr ""
 msgid "Confirm Password"
 msgstr ""
 
-#: xk_html/xk_users.html:77
-msgid "this user?"
+#: xk_html/xk_users.html:59
+msgid "Disable"
 msgstr ""
 
-#: xk_html/xk_users.html:78
+#: xk_html/xk_users.html:60
+msgid "Really disable this user?"
+msgstr ""
+
+#: xk_html/xk_users.html:64
+msgid "Enable"
+msgstr ""
+
+#: xk_html/xk_users.html:65
+msgid "Really enable this user?"
+msgstr ""
+
+#: xk_html/xk_users.html:80
 msgid "Really delete this user?"
 msgstr ""
 
-#: xk_html/xk_users.html:108 xk_html/xk_users_logs.html:30
+#: xk_html/xk_users.html:110 xk_html/xk_users_logs.html:30
 msgid "UID"
 msgstr ""
 
-#: xk_html/xk_users.html:120
+#: xk_html/xk_users.html:122
 msgid "Current Password"
 msgstr ""
 
-#: xk_html/xk_users.html:126
+#: xk_html/xk_users.html:128
 msgid "New Password"
 msgstr ""
 
-#: xk_html/xk_users.html:132
+#: xk_html/xk_users.html:134
 msgid "Confirm New Password"
 msgstr ""
 

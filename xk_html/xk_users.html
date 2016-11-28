@@ -56,11 +56,13 @@
                             {% for u in users %}
                             {% if u['status'] == 'yes' %}
                             <tr id="line_{{u['id']}}">
-                            {% set st_msg = "{{ _('Disable') }}" %}
+                            {% set st_msg = _('Disable') %}
+                            {% set st_qst = _('Really disable this user?') %}
                             {% set fun_value = "no" %}
                             {% else %}
 							<tr id="line_{{u['id']}}" class="error">
-                            {% set st_msg = "{{ _('Enable') }}" %}
+                            {% set st_msg = _('Enable') %}
+                            {% set st_qst = _('Really enable this user?') %}
                             {% set fun_value = "yes" %}
                             {% endif %}
 								<td>{{ loop.index }}</td>
@@ -74,7 +76,7 @@
                                 <td>
                                     <a href="javascript:void(0);" onclick="to_edit({{u['id']}})">{{ _('Edit') }}</a> |
                                     <a href="javascript:void(0);" onclick="ch_pass({{u['id']}},'{{u['username']}}')">{{ _('Password') }}</a> |
-                                    <a href="/public/api?module=users&fun=ch_status&id={{u['id']}}&value={{fun_value}}" onclick="return confirm('{{ _('Confirm') }}{{st_msg}}{{ _('this user?') }}');">{{st_msg}}</a> |
+                                    <a href="/public/api?module=users&fun=ch_status&id={{u['id']}}&value={{fun_value}}" onclick="return confirm('{{st_qst}}');">{{st_msg}}</a> |
                                     <a href="/public/api?module=users&fun=del&id={{u['id']}}" onclick="return confirm('{{ _('Really delete this user?') }}');">{{ _('Delete') }}</a>
                                 </td>
 							</tr>

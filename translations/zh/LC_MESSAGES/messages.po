@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-11-13 15:10+1100\n"
+"POT-Creation-Date: 2016-11-28 16:25+1100\n"
 "PO-Revision-Date: 2016-05-13 13:36+1000\n"
 "Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
 "Language: zh\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: xk_application/xk_main.py:138
+#: xk_application/xk_main.py:139
 msgid "Sorry, you do not have permission to perform that operation!"
 msgstr "Sorry，您没有权限操作！"
 
@@ -44,9 +44,9 @@ msgid "Binding Rules"
 msgstr "绑定规则"
 
 #: xk_html/xk_dhcp_pool.html:23 xk_html/xk_domain.html:48
-#: xk_html/xk_domain.html:83 xk_html/xk_record.html:74
-#: xk_html/xk_record.html:124 xk_html/xk_users.html:52 xk_html/xk_users.html:92
-#: xk_html/xk_users.html:139
+#: xk_html/xk_domain.html:85 xk_html/xk_record.html:74
+#: xk_html/xk_record.html:126 xk_html/xk_users.html:52 xk_html/xk_users.html:94
+#: xk_html/xk_users.html:141
 msgid "Save"
 msgstr "保存"
 
@@ -67,6 +67,7 @@ msgid "Gateway Address"
 msgstr "网关地址"
 
 #: xk_html/xk_dhcp_pool.html:78 xk_html/xk_domain.html:31
+#: xk_html/xk_index.html:27
 msgid "Domain Name"
 msgstr "域名"
 
@@ -76,13 +77,14 @@ msgstr "租约"
 
 #: xk_html/xk_dhcp_pool.html:87 xk_html/xk_dhcp_pool.html:88
 #: xk_html/xk_dhcp_pool.html:89 xk_html/xk_dhcp_pool.html:90
-#: xk_html/xk_dhcp_pool.html:91
+#: xk_html/xk_dhcp_pool.html:91 xk_html/xk_index.html:36
 msgid "hours"
 msgstr "小时"
 
 #: xk_html/xk_dhcp_pool.html:92 xk_html/xk_dhcp_pool.html:93
 #: xk_html/xk_dhcp_pool.html:94 xk_html/xk_dhcp_pool.html:95
 #: xk_html/xk_dhcp_pool.html:96 xk_html/xk_dhcp_pool.html:97
+#: xk_html/xk_index.html:36
 msgid "days"
 msgstr "天"
 
@@ -122,9 +124,9 @@ msgstr "保存成功"
 msgid "Refresh the DHCP configuration"
 msgstr "是否刷新DHCP配置"
 
-#: xk_html/xk_dhcp_pool.html:182 xk_html/xk_domain.html:129
-#: xk_html/xk_domain.html:180 xk_html/xk_record.html:175
-#: xk_html/xk_record.html:215 xk_html/xk_record.html:254
+#: xk_html/xk_dhcp_pool.html:182 xk_html/xk_domain.html:131
+#: xk_html/xk_domain.html:182 xk_html/xk_record.html:177
+#: xk_html/xk_record.html:217 xk_html/xk_record.html:256
 msgid "Alert"
 msgstr "提示"
 
@@ -132,10 +134,10 @@ msgstr "提示"
 msgid "Save failed!"
 msgstr "保存失败!"
 
-#: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:133
-#: xk_html/xk_domain.html:185 xk_html/xk_record.html:179
-#: xk_html/xk_record.html:219 xk_html/xk_record.html:259
-#: xk_html/xk_users_logs.html:85
+#: xk_html/xk_dhcp_pool.html:187 xk_html/xk_domain.html:135
+#: xk_html/xk_domain.html:187 xk_html/xk_index.html:128
+#: xk_html/xk_record.html:181 xk_html/xk_record.html:221
+#: xk_html/xk_record.html:261 xk_html/xk_users_logs.html:85
 msgid "Note: Internal Server Error"
 msgstr "提示：服务器内部错误"
 
@@ -172,93 +174,238 @@ msgstr "备注"
 msgid "Operation"
 msgstr "操作"
 
-#: xk_html/xk_domain.html:49 xk_html/xk_domain.html:84
-#: xk_html/xk_record.html:75 xk_html/xk_record.html:125
-#: xk_html/xk_users.html:53 xk_html/xk_users.html:93 xk_html/xk_users.html:138
+#: xk_html/xk_domain.html:49 xk_html/xk_domain.html:86
+#: xk_html/xk_record.html:75 xk_html/xk_record.html:127
+#: xk_html/xk_users.html:53 xk_html/xk_users.html:95 xk_html/xk_users.html:140
 msgid "Cancel"
 msgstr "取消"
 
-#: xk_html/xk_domain.html:63
+#: xk_html/xk_domain.html:55 xk_html/xk_record.html:81
+msgid "Suspend"
+msgstr "暂停"
+
+#: xk_html/xk_domain.html:56
+msgid "Really suspend this domain name?"
+msgstr "确认暂停该域名？"
+
+#: xk_html/xk_domain.html:60 xk_html/xk_record.html:86
+msgid "Activate"
+msgstr "开启"
+
+#: xk_html/xk_domain.html:61
+msgid "Really activate this domain name?"
+msgstr "确认开启该域名？"
+
+#: xk_html/xk_domain.html:65
 msgid "View"
 msgstr "查看"
 
-#: xk_html/xk_domain.html:63
+#: xk_html/xk_domain.html:65
 msgid "of"
 msgstr "的"
 
-#: xk_html/xk_domain.html:63
+#: xk_html/xk_domain.html:65 xk_html/xk_index.html:30
 msgid "records"
 msgstr "记录"
 
-#: xk_html/xk_domain.html:69 xk_html/xk_record.html:97 xk_html/xk_users.html:75
+#: xk_html/xk_domain.html:71 xk_html/xk_record.html:99 xk_html/xk_users.html:77
 msgid "Edit"
 msgstr "编辑"
 
-#: xk_html/xk_domain.html:70 xk_html/xk_record.html:98 xk_html/xk_users.html:77
-msgid "Confirm"
-msgstr "确认"
-
-#: xk_html/xk_domain.html:70
-msgid "this domain name?"
-msgstr "该域名?"
-
-#: xk_html/xk_domain.html:71
+#: xk_html/xk_domain.html:73
 msgid "Delete this domain name and all related records"
 msgstr "确认删除该域名，并且同时删除该域名所有记录"
 
-#: xk_html/xk_domain.html:71 xk_html/xk_record.html:99 xk_html/xk_users.html:78
+#: xk_html/xk_domain.html:73 xk_html/xk_record.html:101
+#: xk_html/xk_users.html:80
 msgid "Delete"
 msgstr "删除"
 
-#: xk_html/xk_domain.html:92 xk_html/xk_record.html:133
-#: xk_html/xk_users.html:101 xk_html/xk_users_logs.html:56
+#: xk_html/xk_domain.html:94 xk_html/xk_record.html:135
+#: xk_html/xk_users.html:103 xk_html/xk_users_logs.html:56
 msgid "More"
 msgstr "More"
 
-#: xk_html/xk_domain.html:107
+#: xk_html/xk_domain.html:109
 msgid "Please enter Domain Name!"
 msgstr "请输入域名!"
 
-#: xk_html/xk_domain.html:112
+#: xk_html/xk_domain.html:114
 msgid "Please enter Domain Name Record!"
 msgstr "请输入域名文件!"
 
-#: xk_html/xk_domain.html:123 xk_html/xk_record.html:169
+#: xk_html/xk_domain.html:125 xk_html/xk_record.html:171
 #: xk_static/js/xk_users.js:59
 msgid "Added successfully"
 msgstr "添加成功"
 
-#: xk_html/xk_domain.html:126
+#: xk_html/xk_domain.html:128
 msgid "Domain name already exists!"
 msgstr "域名已存在!"
 
-#: xk_html/xk_domain.html:129
+#: xk_html/xk_domain.html:131
 msgid "Add domain name failed!"
 msgstr "添加域名失败!"
 
-#: xk_html/xk_domain.html:144
+#: xk_html/xk_domain.html:146
 msgid "Enter the domain profile"
 msgstr "同步动态输入域名配置文件"
 
-#: xk_html/xk_domain.html:165 xk_html/xk_record.html:236
+#: xk_html/xk_domain.html:167 xk_html/xk_record.html:238
 msgid "Edit saved records"
 msgstr "编辑保存记录"
 
-#: xk_html/xk_domain.html:177 xk_html/xk_record.html:251
+#: xk_html/xk_domain.html:179 xk_html/xk_record.html:253
 #: xk_static/js/xk_users.js:113
 msgid "Successfully modified"
 msgstr "修改成功！"
 
-#: xk_html/xk_domain.html:180 xk_html/xk_record.html:254
+#: xk_html/xk_domain.html:182 xk_html/xk_record.html:256
 msgid "Failed to edit"
 msgstr "修改失败"
 
-#: xk_html/xk_login.html:14 xk_html/xk_users.html:31 xk_html/xk_users.html:114
+#: xk_html/xk_index.html:8
+msgid "Console"
+msgstr "控制台"
+
+#: xk_html/xk_index.html:22 xk_html/xk_nav.html:8 xk_html/xk_top_nav.html:12
+msgid "Dashboard"
+msgstr "控制中心"
+
+#: xk_html/xk_index.html:33 xk_html/xk_nav.html:26
+msgid "users"
+msgstr "用户"
+
+#: xk_html/xk_index.html:36
+msgid "minutes"
+msgstr "分钟"
+
+#: xk_html/xk_index.html:36
+msgid "uptime"
+msgstr "运行时间"
+
+#: xk_html/xk_index.html:42
+msgid "system message"
+msgstr "系统信息"
+
+#: xk_html/xk_index.html:46
+msgid "CPU Name"
+msgstr "主机名"
+
+#: xk_html/xk_index.html:47
+msgid "Refresh Data"
+msgstr "刷新数据"
+
+#: xk_html/xk_index.html:48
+msgid "Restart the Server"
+msgstr "重启服务器"
+
+#: xk_html/xk_index.html:49
+msgid "Shutdown the Server"
+msgstr "关闭服务器"
+
+#: xk_html/xk_index.html:50
+msgid "Operating System"
+msgstr "操作系统"
+
+#: xk_html/xk_index.html:53
+msgid "IP Address"
+msgstr "IP地址"
+
+#: xk_html/xk_index.html:54
+msgid "Outflow rate"
+msgstr "流出流量"
+
+#: xk_html/xk_index.html:54
+msgid "Inflow rate"
+msgstr "流入流量"
+
+#: xk_html/xk_index.html:57
+msgid "CPU usage is"
+msgstr "CPU使用"
+
+#: xk_html/xk_index.html:61
+msgid "System idle rate"
+msgstr "系统空闲率"
+
+#: xk_html/xk_index.html:67
+msgid "System Status"
+msgstr "系统状态"
+
+#: xk_html/xk_index.html:72
+msgid "Running"
+msgstr "运行中"
+
+#: xk_html/xk_index.html:74
+msgid "Stop"
+msgstr "停止"
+
+#: xk_html/xk_index.html:77
+msgid "service exception"
+msgstr "服务异常"
+
+#: xk_html/xk_index.html:79
+msgid "Start"
+msgstr "启动"
+
+#: xk_html/xk_index.html:83
+msgid "Reload configuration"
+msgstr "重新加载服务配置"
+
+#: xk_html/xk_index.html:83
+msgid "Reload"
+msgstr "Reload"
+
+#: xk_html/xk_index.html:84
+msgid "Restart service"
+msgstr "重启服务"
+
+#: xk_html/xk_index.html:84
+msgid "Restart"
+msgstr "Restart"
+
+#: xk_html/xk_index.html:85
+msgid "service"
+msgstr "service"
+
+#: xk_html/xk_index.html:86
+msgid "Version"
+msgstr "版本"
+
+#: xk_html/xk_index.html:89
+msgid "System Load"
+msgstr "系统负载"
+
+#: xk_html/xk_index.html:90
+msgid "minute"
+msgstr "分钟"
+
+#: xk_html/xk_index.html:93
+msgid "Disk Usage"
+msgstr "磁盘使用"
+
+#: xk_html/xk_index.html:97
+msgid "Memory Usage"
+msgstr "内存使用"
+
+#: xk_html/xk_index.html:117
+msgid "Operation Succeeded"
+msgstr "操作成功！"
+
+#: xk_html/xk_index.html:121
+msgid "Operation Failed"
+msgstr "操作失败！"
+
+#: xk_html/xk_index.html:124
+msgid "We encountered an unknown problem"
+msgstr "遇到未知问题！"
+
+#: xk_html/xk_login.html:14 xk_html/xk_users.html:31 xk_html/xk_users.html:116
 #: xk_html/xk_users_logs.html:31
 msgid "Username"
 msgstr "用户名"
 
-#: xk_html/xk_login.html:15 xk_html/xk_users.html:48 xk_html/xk_users.html:76
+#: xk_html/xk_login.html:15 xk_html/xk_users.html:48 xk_html/xk_users.html:78
 msgid "Password"
 msgstr "密码"
 
@@ -269,10 +416,6 @@ msgstr "记住登录"
 #: xk_html/xk_login.html:18
 msgid "Log in"
 msgstr "登　录"
-
-#: xk_html/xk_nav.html:8 xk_html/xk_top_nav.html:12
-msgid "Dashboard"
-msgstr "控制中心"
 
 #: xk_html/xk_nav.html:14 xk_html/xk_top_nav.html:15
 msgid "DNS Management"
@@ -285,10 +428,6 @@ msgstr "消息中心"
 #: xk_html/xk_nav.html:23
 msgid "System Settings"
 msgstr "系统设置"
-
-#: xk_html/xk_nav.html:26
-msgid "users"
-msgstr "用户"
 
 #: xk_html/xk_nav.html:29 xk_html/xk_top_nav.html:13 xk_html/xk_users.html:8
 #: xk_html/xk_users.html:21
@@ -351,47 +490,51 @@ msgstr "记录值"
 msgid "MX Priority"
 msgstr "MX优先级"
 
-#: xk_html/xk_record.html:98
-msgid "this record?"
-msgstr "该 记录?"
+#: xk_html/xk_record.html:82
+msgid "Really suspend the domain record?"
+msgstr "确认暂停该记录？"
 
-#: xk_html/xk_record.html:99
+#: xk_html/xk_record.html:87
+msgid "Really activate the domain record?"
+msgstr "确认开启该记录？"
+
+#: xk_html/xk_record.html:101
 msgid "Really delete this record?"
 msgstr "确认删除该记录?"
 
-#: xk_html/xk_record.html:148
+#: xk_html/xk_record.html:150
 msgid "Please enter records!"
 msgstr "请输入记录!"
 
-#: xk_html/xk_record.html:153
+#: xk_html/xk_record.html:155
 msgid "Please enter Record Values!"
 msgstr "请输入记录值!"
 
-#: xk_html/xk_record.html:158
+#: xk_html/xk_record.html:160
 msgid "Please enter MX priority!"
 msgstr "请输入MX优先级!"
 
-#: xk_html/xk_record.html:172
+#: xk_html/xk_record.html:174
 msgid "Record already exists!"
 msgstr "记录已存在!"
 
-#: xk_html/xk_record.html:175
+#: xk_html/xk_record.html:177
 msgid "Failed to add record"
 msgstr "添加记录失败"
 
-#: xk_html/xk_record.html:203
+#: xk_html/xk_record.html:205
 msgid "Synchronization successful"
 msgstr "同步成功"
 
-#: xk_html/xk_record.html:206
+#: xk_html/xk_record.html:208
 msgid "DNSmasq failed to restart"
 msgstr "DNSmasq服务重启失败"
 
-#: xk_html/xk_record.html:209
+#: xk_html/xk_record.html:211
 msgid "Domain name MD5 checksum failure, proceed anyway"
 msgstr "域名配置文件MD5值校验失败，是否强制覆盖"
 
-#: xk_html/xk_record.html:215
+#: xk_html/xk_record.html:217
 msgid "Synchronization failed to parse"
 msgstr "同步解析失败"
 
@@ -435,27 +578,39 @@ msgstr "手机号"
 msgid "Confirm Password"
 msgstr "确认密码"
 
-#: xk_html/xk_users.html:77
-msgid "this user?"
-msgstr "该用户?"
+#: xk_html/xk_users.html:59
+msgid "Disable"
+msgstr "禁用"
 
-#: xk_html/xk_users.html:78
+#: xk_html/xk_users.html:60
+msgid "Really disable this user?"
+msgstr "确认禁用该用户？"
+
+#: xk_html/xk_users.html:64
+msgid "Enable"
+msgstr "启用"
+
+#: xk_html/xk_users.html:65
+msgid "Really enable this user?"
+msgstr "确认启用该用户？"
+
+#: xk_html/xk_users.html:80
 msgid "Really delete this user?"
 msgstr "确认删除该用户?"
 
-#: xk_html/xk_users.html:108 xk_html/xk_users_logs.html:30
+#: xk_html/xk_users.html:110 xk_html/xk_users_logs.html:30
 msgid "UID"
 msgstr "UID"
 
-#: xk_html/xk_users.html:120
+#: xk_html/xk_users.html:122
 msgid "Current Password"
 msgstr "原始密码"
 
-#: xk_html/xk_users.html:126
+#: xk_html/xk_users.html:128
 msgid "New Password"
 msgstr "新密码"
 
-#: xk_html/xk_users.html:132
+#: xk_html/xk_users.html:134
 msgid "Confirm New Password"
 msgstr "确认新密码"
 
@@ -583,4 +738,28 @@ msgstr "提示：修改密码失败"
 
 #~ msgid "Action"
 #~ msgstr "动作"
+
+#~ msgid "this user?"
+#~ msgstr "该用户?"
+
+#~ msgid "this record?"
+#~ msgstr "该 记录?"
+
+#~ msgid "time out"
+#~ msgstr ""
+
+#~ msgid "open"
+#~ msgstr ""
+
+#~ msgid "Confirm"
+#~ msgstr "确认"
+
+#~ msgid "this domain name?"
+#~ msgstr "该域名?"
+
+#~ msgid "Really suspend the domain name?"
+#~ msgstr "确认暂停该记录？"
+
+#~ msgid "Really activate the domain name?"
+#~ msgstr "确认开启该记录？"
 
