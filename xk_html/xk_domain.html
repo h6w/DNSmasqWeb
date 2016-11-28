@@ -52,11 +52,11 @@
                             {% for d in domains %}
                             {% if d['status'] == 'yes' %}
                             <tr id="line_{{d['id']}}">
-                            {% set st_msg = "{{ _('time out') }}" %}
+                            {% set st_msg = _('time out') %}
                             {% set fun_value = "no" %}
                             {% else %}
 							<tr id="line_{{d['id']}}" class="error">
-                            {% set st_msg = "{{ _('open') }}" %}
+                            {% set st_msg = _('open') %}
                             {% set fun_value = "yes" %}
                             {% endif %}
 								<td><input type="checkbox"/> {{ loop.index }}</td>

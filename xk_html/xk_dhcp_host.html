@@ -80,17 +80,17 @@
                             {% for d in dhcp_hosts %}
                             {% if d['status'] == 'yes' %}
                             <tr id="line_{{d['id']}}">
-                            {% set st_msg = "{{ _('time out') }}" %}
+                            {% set st_msg = _('time out') %}
                             {% set fun_value = "no" %}
                             {% else %}
 							<tr id="line_{{d['id']}}" class="error">
-                            {% set st_msg = "{{ _('open') }}" %}
+                            {% set st_msg = _('open') %}
                             {% set fun_value = "yes" %}
                             {% endif %}
                             {% if d['action'] == 'allow' %}
-                                {% set action = '{{ _('Allowed') }}' %}
+                                {% set action = _('Allowed') %}
                                 {% set action_value = 'ignore' %}
-                                {% set action_msg = "{{ _('Ignore') }}" %}
+                                {% set action_msg = _('Ignore') %}
                             {% else %}
                                 {% set action = '{{ _('Ignored') }}' %}
                                 {% set action_value = 'allow' %}
