@@ -27,11 +27,11 @@ class PublicAPIHandler(BaseHandler):
             new_md5 = self.get_md5(file)
             self.db.execute("update xk_options set value = %s where name = 'xk_dhcp_conf_md5' and type = 'dhcp'",new_md5)
             sv_rt = os.system("/etc/init.d/dnsmasq restart")
-            return SUCCESS
+            return self.SUCCESS
         if force is False:
             check_md5 = self.get_md5(file)
             if check_md5 != d['xk_dhcp_conf_md5']:
-                return MD5_FAILED
+                return self.MD5_FAILED
         if not d['xk_dhcp_pool_domain']:
             d['xk_dhcp_pool_domain'] = 'luxiaok.com'
         if not d['xk_dhcp_pool_dns2']:
@@ -58,7 +58,7 @@ dhcp-option=15,%s\n''' % (d['xk_dhcp_pool_start'],d['xk_dhcp_pool_stop'],d['xk_d
             f = open(file,'w')
             f.write(conf)
         except:
-            return WRITE_FAILED
+            return self.WRITE_FAILED
         finally:
             f.close()
         new_md5 = self.get_md5(file)
@@ -66,9 +66,9 @@ dhcp-option=15,%s\n''' % (d['xk_dhcp_pool_start'],d['xk_dhcp_pool_stop'],d['xk_d
         self.db.execute("update xk_options set value = %s where name = 'xk_dhcp_conf_md5' and type = 'dhcp'",new_md5)
         sv_rt = os.system("/etc/init.d/dnsmasq restart")
         if sv_rt == 0:
-            return SUCCESS
+            return self.SUCCESS
         else:
-            return RESTART_FAILED
+            return self.RESTART_FAILED
 
     @Auth
     def get(self):
@@ -125,18 +125,18 @@ dhcp-option=15,%s\n''' % (d['xk_dhcp_pool_start'],d['xk_dhcp_pool_stop'],d['xk_d
                     if sv_rt == 0:
                         update_md5 = self.get_md5("/etc/dnsmasq.d/" + i['file'])
                         self.db.execute("update xk_domain set file_md5 = %s where id = %s",update_md5,id)
-                        self.write(SUCCESS_STR)
+                        self.write(self.SUCCESS_STR)
                     else:
-                        self.write(RESTART_FAILED_STR)
+                        self.write(self.RESTART_FAILED_STR)
                 else:
-                    self.write(CONFIG_FAILED_STR)
+                    self.write(self.CONFIG_FAILED_STR)
 
             elif fun in ("reload","restart","start","stop"):
                 sv_rt = os.system("/etc/init.d/dnsmasq " + fun)
                 if sv_rt == 0:
-                    self.write(SUCCESS_STR)
+                    self.write(self.SUCCESS_STR)
                 else:
-                    self.write(FAIL_STR)
+                    self.write(self.FAIL_STR)
         elif module == "dhcp_host":
             if fun == "ch_status":
                 self.db.execute("update xk_dhcp_host set status = %s where id = %s",value,id)
