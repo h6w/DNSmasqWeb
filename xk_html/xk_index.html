@@ -80,9 +80,9 @@
                             {% endif %}
 							<i class="icon-asterisk"></i>
                             <a class="title" href="javascript:void(0);" onclick="alert('DNSmasq {{st_msg}}')">DNSmasq</a> <font color="{{st_color}}">{{st_msg}}</font> 
-                            <a class="btn btn-success" href="javascript:void(0);" title="{{ _('Reload configuration') }}" onclick="run_sevice('reload')">{{ _('Reload') }}</a>
-                            <a class="btn btn-warning" href="javascript:void(0);" title="{{ _('Restart service') }}" onclick="run_sevice('restart')">{{ _('Restart') }}</a>
-                            <a class="btn btn-danger" href="javascript:void(0);" title="{{next_run_msg}}{{ _('service') }}" onclick="run_sevice('{{next_run}}')">{{next_run | title}}</a>
+                            <a class="btn btn-success" href="javascript:void(0);" title="{{ _('Reload configuration') }}" onclick="run_service('reload')">{{ _('Reload') }}</a>
+                            <a class="btn btn-warning" href="javascript:void(0);" title="{{ _('Restart service') }}" onclick="run_service('restart')">{{ _('Restart') }}</a>
+                            <a class="btn btn-danger" href="javascript:void(0);" title="{{next_run_msg}}{{ _('service') }}" onclick="run_service('{{next_run}}')">{{next_run | title}}</a>
                             <span class="meta">{{ _('Version') }} <em>{{data['dnsmasq']['version']}}</em></span>
 						</li>
 						<li>
@@ -106,7 +106,7 @@
 		<script src="xk_static/js/xk_dnsmasqweb.js"></script>
         {% include "xk_footer.html" %}
 <script type="text/javascript">
-function run_sevice(fun) {
+function run_service(fun) {
     $.ajax({
         type: "GET",
         url: "/public/api",
