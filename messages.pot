@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-11-28 17:07+1100\n"
+"POT-Creation-Date: 2016-11-28 18:27+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,6 @@ msgid "Refresh configuration"
 msgstr ""
 
 #: xk_html/xk_dhcp_host.html:29 xk_html/xk_dhcp_host.html:71
-#: xk_html/xk_index.html:46
 msgid "CPU Name"
 msgstr ""
 
@@ -396,6 +395,10 @@ msgstr ""
 
 #: xk_html/xk_index.html:42
 msgid "system message"
+msgstr ""
+
+#: xk_html/xk_index.html:46
+msgid "Hostname"
 msgstr ""
 
 #: xk_html/xk_index.html:47

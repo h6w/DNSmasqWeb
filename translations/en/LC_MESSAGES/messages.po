@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: tudor@tudorholton.com\n"
-"POT-Creation-Date: 2016-11-28 17:07+1100\n"
+"POT-Creation-Date: 2016-11-28 18:27+1100\n"
 "PO-Revision-Date: 2016-05-13 13:34+1000\n"
 "Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
 "Language: en\n"
@@ -53,7 +53,6 @@ msgid "Refresh configuration"
 msgstr "Refresh configuration"
 
 #: xk_html/xk_dhcp_host.html:29 xk_html/xk_dhcp_host.html:71
-#: xk_html/xk_index.html:46
 msgid "CPU Name"
 msgstr "CPU Name"
 
@@ -398,6 +397,10 @@ msgstr "uptime"
 #: xk_html/xk_index.html:42
 msgid "system message"
 msgstr "system message"
+
+#: xk_html/xk_index.html:46
+msgid "Hostname"
+msgstr "Hostname"
 
 #: xk_html/xk_index.html:47
 msgid "Refresh Data"

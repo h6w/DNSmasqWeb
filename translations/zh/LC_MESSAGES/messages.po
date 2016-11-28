@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-11-28 17:07+1100\n"
+"POT-Creation-Date: 2016-11-28 18:27+1100\n"
 "PO-Revision-Date: 2016-05-13 13:36+1000\n"
 "Last-Translator: Tudor Holton <tudor@tudorholton.com>\n"
 "Language: zh\n"
@@ -53,7 +53,6 @@ msgid "Refresh configuration"
 msgstr "刷新配置"
 
 #: xk_html/xk_dhcp_host.html:29 xk_html/xk_dhcp_host.html:71
-#: xk_html/xk_index.html:46
 msgid "CPU Name"
 msgstr "主机名"
 
@@ -398,6 +397,10 @@ msgstr "运行时间"
 #: xk_html/xk_index.html:42
 msgid "system message"
 msgstr "系统信息"
+
+#: xk_html/xk_index.html:46
+msgid "Hostname"
+msgstr "主机名"
 
 #: xk_html/xk_index.html:47
 msgid "Refresh Data"
