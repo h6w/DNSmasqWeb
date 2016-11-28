@@ -80,31 +80,37 @@
                             {% for d in dhcp_hosts %}
                             {% if d['status'] == 'yes' %}
                             <tr id="line_{{d['id']}}">
-                            {% set st_msg = _('time out') %}
+                            {% set st_msg = _('Suspend') %}
+                            {% set st_qst = _('Really suspend these records?') %}
                             {% set fun_value = "no" %}
                             {% else %}
 							<tr id="line_{{d['id']}}" class="error">
-                            {% set st_msg = _('open') %}
+                            {% set st_msg = _('Enable') %}
+                            {% set st_qst = _('Really enable these records?') %}
                             {% set fun_value = "yes" %}
                             {% endif %}
                             {% if d['action'] == 'allow' %}
                                 {% set action = _('Allowed') %}
                                 {% set action_value = 'ignore' %}
                                 {% set action_msg = _('Ignore') %}
+                                {% set action_qst = _('Really ignore these records?') %}
+                                {% set action_title = _('Click to ignore these records') %}
                             {% else %}
-                                {% set action = '{{ _('Ignored') }}' %}
+                                {% set action = _('Ignored') %}
                                 {% set action_value = 'allow' %}
-                                {% set action_msg = "{{ _('Allow') }}" %}
+                                {% set action_msg = _('Allow') %}
+                                {% set action_qst = _('Really allow these records?') %}
+                                {% set action_title = _('Click to allow these records') %}
                             {% endif %}
 								<td><input type="checkbox"/> {{ loop.index }}</td>
                                 <td>{{ d['hostname'] }}</td>
                                 <td>{{ d['mac'] }}</td>
                                 <td>{{ d['ip'] }}</td>
-                                <td><a href="/public/api?module=dhcp_host&fun=ch_action&id={{d['id']}}&value={{action_value}}" onclick="return confirm('{{ _('Confirm') }}{{action_msg}}{{ _('this record?') }}');" title="{{ _('Click') }}{{action_msg}}{{ _('this record') }}">{{ action }}</a></td>
+                                <td><a href="/public/api?module=dhcp_host&fun=ch_action&id={{d['id']}}&value={{action_value}}" onclick="return confirm('{{action_qst}');" title="{{action_title}}">{{ action }}</a></td>
                                 <td>{{ d['comment'] or '' }}</td>
                                 <td>
                                     <a href="javascript:void(0);" onclick="to_edit({{d['id']}})">{{ _('Edit') }}</a> |
-                                    <a href="/public/api?module=dhcp_host&fun=ch_status&id={{d['id']}}&value={{fun_value}}" onclick="return confirm('{{ _('Confirm') }}{{st_msg}}{{ _('records') }}?');">{{st_msg}}</a> |
+                                    <a href="/public/api?module=dhcp_host&fun=ch_status&id={{d['id']}}&value={{fun_value}}" onclick="return confirm('{{st_qst}}?');">{{st_msg}}</a> |
                                     <a href="/public/api?module=dhcp_host&fun=del&id={{d['id']}}" onclick="return confirm('{{ _('Delete these records') }}?');">{{ _('Delete') }}</a>
                                 </td>
 							</tr>
